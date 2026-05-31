@@ -1,0 +1,533 @@
+{
+  "computer": [
+    {
+      "id": "morning",
+      "period": "早晨",
+      "question": "新的一天开机了，你准备用哪种方式启动计算机人的早晨？",
+      "options": [
+        {
+          "id": "computer-morning-code-class",
+          "label": "早八程序设计课，眼睛还没醒但 IDE 已经开了",
+          "event": "上课",
+          "locationId": "teachingBuilding",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 1, "pressure": 1 }
+        },
+        {
+          "id": "computer-morning-algorithm-warmup",
+          "label": "在宿舍刷两道算法题，给大脑做热身",
+          "event": "自习",
+          "locationId": "dorm",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 1, "pressure": 1 }
+        },
+        {
+          "id": "computer-morning-run",
+          "label": "操场晨跑，今天先优化自己的运行状态",
+          "event": "运动",
+          "locationId": "sportsField",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "computer-morning-coffee-breakfast",
+          "label": "买咖啡加早餐，靠咖啡因完成系统启动",
+          "event": "吃饭",
+          "locationId": "cafeteria",
+          "score": { "health": 0, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        }
+      ]
+    },
+    {
+      "id": "forenoon",
+      "period": "上午",
+      "question": "上午进入主线任务，你更想把时间交给哪件事？",
+      "options": [
+        {
+          "id": "computer-forenoon-data-structure",
+          "label": "数据结构课，链表、树和你一起生长",
+          "event": "上课",
+          "locationId": "teachingBuilding",
+          "score": { "health": 0, "study": 3, "social": 0, "practice": 1, "pressure": 2 }
+        },
+        {
+          "id": "computer-forenoon-system-lab",
+          "label": "计算机组成原理实验，和寄存器互相理解",
+          "event": "实验",
+          "locationId": "labBuilding",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 3, "pressure": 2 }
+        },
+        {
+          "id": "computer-forenoon-library-review",
+          "label": "图书馆自习，把昨天的 bug 重新审判一遍",
+          "event": "自习",
+          "locationId": "library",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 1, "pressure": 1 }
+        },
+        {
+          "id": "computer-forenoon-english-talk",
+          "label": "听一段英语技术演讲，顺便假装自己在开源大会",
+          "event": "晨读",
+          "locationId": "dorm",
+          "score": { "health": 0, "study": 1, "social": 0, "practice": 0, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "noon",
+      "period": "中午",
+      "question": "中午固定进入吃饭环节，你准备怎样补充能量？",
+      "options": [
+        {
+          "id": "computer-noon-healthy-meal",
+          "label": "营养减脂餐，为了健康与美丽",
+          "event": "吃饭",
+          "locationId": "cafeteria",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "computer-noon-quick-meal",
+          "label": "便利店简餐，快速搞定，留足时间休息",
+          "event": "吃饭",
+          "locationId": "dorm",
+          "score": { "health": 0, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "computer-noon-treat-meal",
+          "label": "外卖放纵餐，辛苦的一天要好好奖励自己！",
+          "event": "吃饭",
+          "locationId": "dorm",
+          "score": { "health": -1, "study": 0, "social": 1, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "computer-noon-table-chat",
+          "label": "和同学拼桌吃饭，顺便交换课堂情报",
+          "event": "吃饭",
+          "locationId": "cafeteria",
+          "score": { "health": 1, "study": 0, "social": 2, "practice": 0, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "period": "下午",
+      "question": "下午容易进入硬核模式，你会选择哪条路线？",
+      "options": [
+        {
+          "id": "computer-afternoon-course-project",
+          "label": "去实验楼写课程项目，今天目标是能跑就行",
+          "event": "项目实践",
+          "locationId": "labBuilding",
+          "score": { "health": 0, "study": 1, "social": 0, "practice": 3, "pressure": 2 }
+        },
+        {
+          "id": "computer-afternoon-team-doc",
+          "label": "小组讨论需求文档，大家一起假装很懂产品",
+          "event": "小组讨论",
+          "locationId": "studyRoom",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 2, "pressure": 1 }
+        },
+        {
+          "id": "computer-afternoon-security-club",
+          "label": "网络安全社团练习，体验一下攻防的快乐",
+          "event": "社团活动",
+          "locationId": "clubCenter",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 3, "pressure": 1 }
+        },
+        {
+          "id": "computer-afternoon-nap",
+          "label": "回宿舍补觉，CPU 过热需要降温",
+          "event": "休息",
+          "locationId": "dorm",
+          "score": { "health": 2, "study": -1, "social": 0, "practice": 0, "pressure": -2 }
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "period": "晚上",
+      "question": "夜色降临，计算机人的今日收尾会是什么形状？",
+      "options": [
+        {
+          "id": "computer-night-algorithm-practice",
+          "label": "图书馆刷题，和算法题进行友好谈判",
+          "event": "自习",
+          "locationId": "library",
+          "score": { "health": -1, "study": 3, "social": 0, "practice": 1, "pressure": 2 }
+        },
+        {
+          "id": "computer-night-debug",
+          "label": "继续 debug，和红色报错互相折磨",
+          "event": "项目实践",
+          "locationId": "labBuilding",
+          "score": { "health": -1, "study": 1, "social": 0, "practice": 3, "pressure": 3 }
+        },
+        {
+          "id": "computer-night-walk",
+          "label": "操场散步，把脑子里的死循环走出去",
+          "event": "娱乐放松",
+          "locationId": "sportsField",
+          "score": { "health": 2, "study": 0, "social": 1, "practice": 0, "pressure": -2 }
+        },
+        {
+          "id": "computer-night-tech-share",
+          "label": "参加技术分享会，听学长讲项目踩坑史",
+          "event": "社团活动",
+          "locationId": "clubCenter",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 1, "pressure": 0 }
+        }
+      ]
+    }
+  ],
+  "medicine": [
+    {
+      "id": "morning",
+      "period": "早晨",
+      "question": "医学类的一天从记忆和体力开始，你准备怎么进入状态？",
+      "options": [
+        {
+          "id": "medicine-morning-ward-commute",
+          "label": "从宿舍赶去教学医院，白大褂比人先清醒",
+          "event": "通勤/移动",
+          "locationId": "dorm",
+          "score": { "health": 0, "study": 1, "social": 0, "practice": 1, "pressure": 1 }
+        },
+        {
+          "id": "medicine-morning-anatomy-review",
+          "label": "图书馆复习解剖，骨骼肌肉开始在脑内排队",
+          "event": "自习",
+          "locationId": "library",
+          "score": { "health": 0, "study": 3, "social": 0, "practice": 0, "pressure": 2 }
+        },
+        {
+          "id": "medicine-morning-run",
+          "label": "操场慢跑，先把自己的生命体征调平稳",
+          "event": "运动",
+          "locationId": "sportsField",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "medicine-morning-breakfast",
+          "label": "食堂吃早餐，医学生也需要按时摄入能量",
+          "event": "吃饭",
+          "locationId": "cafeteria",
+          "score": { "health": 1, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        }
+      ]
+    },
+    {
+      "id": "forenoon",
+      "period": "上午",
+      "question": "上午的医学任务排得很满，你会优先投入哪里？",
+      "options": [
+        {
+          "id": "medicine-forenoon-clinical-observation",
+          "label": "跟着老师做临床见习，努力把课本和病历对上号",
+          "event": "兼职/实习",
+          "locationId": "hospital",
+          "score": { "health": 0, "study": 2, "social": 1, "practice": 3, "pressure": 2 }
+        },
+        {
+          "id": "medicine-forenoon-basic-medicine",
+          "label": "基础医学课，老师讲得很快，笔记追得更快",
+          "event": "上课",
+          "locationId": "teachingBuilding",
+          "score": { "health": 0, "study": 3, "social": 0, "practice": 0, "pressure": 2 }
+        },
+        {
+          "id": "medicine-forenoon-lab",
+          "label": "实验楼做显微观察，今天和细胞认真对视",
+          "event": "实验",
+          "locationId": "labBuilding",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 3, "pressure": 1 }
+        },
+        {
+          "id": "medicine-forenoon-clinic",
+          "label": "去门诊旁听问诊，练习把耐心说进每一句话里",
+          "event": "项目实践",
+          "locationId": "clinic",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 3, "pressure": 1 }
+        }
+      ]
+    },
+    {
+      "id": "noon",
+      "period": "中午",
+      "question": "中午固定进入吃饭环节，你准备怎样补充能量？",
+      "options": [
+        {
+          "id": "medicine-noon-healthy-meal",
+          "label": "营养减脂餐，为了健康与美丽",
+          "event": "吃饭",
+          "locationId": "cafeteria",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "medicine-noon-quick-meal",
+          "label": "便利店简餐，快速搞定，留足时间休息",
+          "event": "吃饭",
+          "locationId": "dorm",
+          "score": { "health": 0, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "medicine-noon-treat-meal",
+          "label": "外卖放纵餐，辛苦的一天要好好奖励自己！",
+          "event": "吃饭",
+          "locationId": "dorm",
+          "score": { "health": -1, "study": 0, "social": 1, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "medicine-noon-table-chat",
+          "label": "和同学拼桌吃饭，顺便交换课堂情报",
+          "event": "吃饭",
+          "locationId": "cafeteria",
+          "score": { "health": 1, "study": 0, "social": 2, "practice": 0, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "period": "下午",
+      "question": "下午需要在知识和实践之间切换，你会选择什么？",
+      "options": [
+        {
+          "id": "medicine-afternoon-case-discussion",
+          "label": "小组讨论病例，大家一起寻找诊断线索",
+          "event": "小组讨论",
+          "locationId": "studyRoom",
+          "score": { "health": 0, "study": 2, "social": 2, "practice": 2, "pressure": 1 }
+        },
+        {
+          "id": "medicine-afternoon-skill-training",
+          "label": "去实验楼练操作，手稳一点，心也稳一点",
+          "event": "项目实践",
+          "locationId": "labBuilding",
+          "score": { "health": 0, "study": 1, "social": 0, "practice": 3, "pressure": 2 }
+        },
+        {
+          "id": "medicine-afternoon-library",
+          "label": "图书馆背知识点，今天的大脑是移动题库",
+          "event": "自习",
+          "locationId": "library",
+          "score": { "health": -1, "study": 3, "social": 0, "practice": 0, "pressure": 2 }
+        },
+        {
+          "id": "medicine-afternoon-rest",
+          "label": "回宿舍补觉，给免疫系统一点尊重",
+          "event": "休息",
+          "locationId": "dorm",
+          "score": { "health": 2, "study": -1, "social": 0, "practice": 0, "pressure": -2 }
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "period": "晚上",
+      "question": "晚上收尾时，你想让今天落在哪个状态上？",
+      "options": [
+        {
+          "id": "medicine-night-review",
+          "label": "复盘今日见习记录，把病历线索整理清楚",
+          "event": "自习",
+          "locationId": "library",
+          "score": { "health": -1, "study": 3, "social": 0, "practice": 1, "pressure": 2 }
+        },
+        {
+          "id": "medicine-night-volunteer",
+          "label": "参加健康科普社团，把专业知识讲给更多人听",
+          "event": "社团活动",
+          "locationId": "clubCenter",
+          "score": { "health": 0, "study": 1, "social": 3, "practice": 2, "pressure": 0 }
+        },
+        {
+          "id": "medicine-night-walk",
+          "label": "操场散步，把一天的紧张慢慢代谢掉",
+          "event": "娱乐放松",
+          "locationId": "sportsField",
+          "score": { "health": 2, "study": 0, "social": 1, "practice": 0, "pressure": -2 }
+        },
+        {
+          "id": "medicine-night-extra-practice",
+          "label": "继续练技能操作，动作标准到可以梦里复现",
+          "event": "项目实践",
+          "locationId": "labBuilding",
+          "score": { "health": -1, "study": 1, "social": 0, "practice": 3, "pressure": 3 }
+        }
+      ]
+    }
+  ],
+  "business": [
+    {
+      "id": "morning",
+      "period": "早晨",
+      "question": "经管类的一天开始了，你准备用哪种方式打开商业雷达？",
+      "options": [
+        {
+          "id": "business-morning-accounting-preview",
+          "label": "宿舍预习会计学，今天也要和借贷平衡和解",
+          "event": "自习",
+          "locationId": "dorm",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 1, "pressure": 1 }
+        },
+        {
+          "id": "business-morning-run",
+          "label": "去操场晨跑，先管理自己再管理企业",
+          "event": "运动",
+          "locationId": "sportsField",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "business-morning-news-commute",
+          "label": "路上看财经新闻，感觉自己离华尔街近了一点",
+          "event": "通勤/移动",
+          "locationId": "dorm",
+          "score": { "health": 0, "study": 1, "social": 0, "practice": 0, "pressure": 0 }
+        },
+        {
+          "id": "business-morning-coffee",
+          "label": "便利早餐加咖啡，开启今日商业模式",
+          "event": "吃饭",
+          "locationId": "cafeteria",
+          "score": { "health": 0, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        }
+      ]
+    },
+    {
+      "id": "forenoon",
+      "period": "上午",
+      "question": "上午进入课堂和案例时间，你想把注意力投向哪里？",
+      "options": [
+        {
+          "id": "business-forenoon-finance",
+          "label": "金融学核心课，听起来每个词都很值钱",
+          "event": "上课",
+          "locationId": "teachingBuilding",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 1, "pressure": 1 }
+        },
+        {
+          "id": "business-forenoon-statistics",
+          "label": "统计学课，终于知道表格为什么会说话",
+          "event": "上课",
+          "locationId": "teachingBuilding",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 2, "pressure": 1 }
+        },
+        {
+          "id": "business-forenoon-marketing-case",
+          "label": "市场营销案例讨论，给奶茶店做增长方案",
+          "event": "小组讨论",
+          "locationId": "studyRoom",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 1, "pressure": 1 }
+        },
+        {
+          "id": "business-forenoon-management",
+          "label": "管理学原理课，开始理解为什么开会这么难",
+          "event": "上课",
+          "locationId": "teachingBuilding",
+          "score": { "health": 0, "study": 2, "social": 1, "practice": 0, "pressure": 1 }
+        }
+      ]
+    },
+    {
+      "id": "noon",
+      "period": "中午",
+      "question": "中午固定进入吃饭环节，你准备怎样补充能量？",
+      "options": [
+        {
+          "id": "business-noon-healthy-meal",
+          "label": "营养减脂餐，为了健康与美丽",
+          "event": "吃饭",
+          "locationId": "cafeteria",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "business-noon-quick-meal",
+          "label": "便利店简餐，快速搞定，留足时间休息",
+          "event": "吃饭",
+          "locationId": "dorm",
+          "score": { "health": 0, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "business-noon-treat-meal",
+          "label": "外卖放纵餐，辛苦的一天要好好奖励自己！",
+          "event": "吃饭",
+          "locationId": "dorm",
+          "score": { "health": -1, "study": 0, "social": 1, "practice": 0, "pressure": -1 }
+        },
+        {
+          "id": "business-noon-table-chat",
+          "label": "和同学拼桌吃饭，顺便交换课堂情报",
+          "event": "吃饭",
+          "locationId": "cafeteria",
+          "score": { "health": 1, "study": 0, "social": 2, "practice": 0, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "period": "下午",
+      "question": "下午是经管人的真实演练场，你更想去哪一边？",
+      "options": [
+        {
+          "id": "business-afternoon-industry-report",
+          "label": "图书馆查行业报告，沉浸式成为咨询顾问",
+          "event": "自习",
+          "locationId": "library",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 2, "pressure": 1 }
+        },
+        {
+          "id": "business-afternoon-business-plan",
+          "label": "小组做商业计划书，PPT 先画饼再说",
+          "event": "项目实践",
+          "locationId": "studyRoom",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 3, "pressure": 2 }
+        },
+        {
+          "id": "business-afternoon-internship",
+          "label": "去证券公司或运营岗实习，体验真实职场节奏",
+          "event": "兼职/实习",
+          "locationId": "offCampus",
+          "score": { "health": 0, "study": 1, "social": 1, "practice": 3, "pressure": 1 }
+        },
+        {
+          "id": "business-afternoon-entrepreneur-club",
+          "label": "参加创新创业社团，听大家认真讨论暴富路径",
+          "event": "社团活动",
+          "locationId": "clubCenter",
+          "score": { "health": 0, "study": 1, "social": 3, "practice": 2, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "period": "晚上",
+      "question": "晚上收盘前，你要怎样结束这一天？",
+      "options": [
+        {
+          "id": "business-night-macro-review",
+          "label": "复盘宏观经济学，试图理解世界为什么这么复杂",
+          "event": "自习",
+          "locationId": "library",
+          "score": { "health": -1, "study": 3, "social": 0, "practice": 0, "pressure": 2 }
+        },
+        {
+          "id": "business-night-survey",
+          "label": "做市场调研问卷，开始研究同学们的钱都去哪了",
+          "event": "项目实践",
+          "locationId": "studyRoom",
+          "score": { "health": 0, "study": 1, "social": 1, "practice": 3, "pressure": 1 }
+        },
+        {
+          "id": "business-night-badminton",
+          "label": "体育馆打羽毛球，把 KPI 和压力一起扣杀",
+          "event": "运动",
+          "locationId": "gym",
+          "score": { "health": 2, "study": 0, "social": 1, "practice": 0, "pressure": -2 }
+        },
+        {
+          "id": "business-night-chat",
+          "label": "和朋友聊天放松，今日商业头脑暂停营业",
+          "event": "娱乐放松",
+          "locationId": "clubCenter",
+          "score": { "health": 1, "study": 0, "social": 2, "practice": 0, "pressure": -1 }
+        }
+      ]
+    }
+  ]
+}

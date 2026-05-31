@@ -1,0 +1,432 @@
+[
+  {
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "程序与算法",
+    "courseName": "数据结构与算法分析",
+    "briefIntro": "学习常见数据组织方式和算法思想，是编程能力与算法训练的核心基础。",
+    "usageHint": "适合生成刷题、算法课、代码实验等上课事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "数学与理论基础",
+    "courseName": "离散数学",
+    "briefIntro": "学习集合、图、逻辑等离散结构，为算法、数据库和计算理论打基础。",
+    "usageHint": "适合生成理论课、课后推导、自习复盘等事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "计算机系统",
+    "courseName": "计算机组成原理",
+    "briefIntro": "理解计算机硬件组成、指令执行和系统运行机制。",
+    "usageHint": "适合生成硬件基础课、实验课、系统原理复习等事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "计算机系统",
+    "courseName": "计算机操作系统",
+    "briefIntro": "学习进程、内存、文件系统等操作系统核心机制。",
+    "usageHint": "适合生成系统课、实验调试、熬夜debug等事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "网络与系统",
+    "courseName": "计算机网络",
+    "briefIntro": "学习网络分层、协议、传输和应用通信原理。",
+    "usageHint": "适合生成网络课、抓包实验、课程项目等事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "软件与理论",
+    "courseName": "编译原理",
+    "briefIntro": "学习程序语言从源码到可执行形式的翻译过程和基本方法。",
+    "usageHint": "适合生成高难度理论课、课程设计、实验报告等事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "特色选修",
+    "courseGroup": "人工智能",
+    "courseName": "人工智能导论",
+    "briefIntro": "了解机器学习、搜索、知识表示等人工智能基本概念和应用场景。",
+    "usageHint": "适合生成AI选修课、模型实验、兴趣探索等事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "特色选修",
+    "courseGroup": "网络与安全",
+    "courseName": "计算机和网络安全",
+    "briefIntro": "学习系统与网络安全基础，理解常见攻击、防护和安全实践。",
+    "usageHint": "适合生成安全实验、攻防社团、技术实践等事件。",
+    "source": "北京师范大学-香港浸会大学联合国际学院课程设置",
+    "sourceUrl": "https://www.uic.edu.cn/virtual_attach_file.vsb?afc=nL8LS8o7CPozliozzMkMmviL7LaLR7lin7UbMzlPMlQRUNU0gihFp2hmCIa0n1yPoSh7n1y8oz9snmQ7LlrfMm6kMzrRMmvDLlLiM4CYM4MFUlVknRvsolQFMlCbLm-Jv2nto4OeosrXCDMJgDTJQty0Lz7YLkyPLzGZokbw62r8c&e=.pdf&nid=11088&tid=1120"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "特色选修",
+    "courseGroup": "数据与应用",
+    "courseName": "数据挖掘与知识发现",
+    "briefIntro": "学习从数据中发现规律、模式和可用知识的方法。",
+    "usageHint": "适合生成数据分析课、项目实践、可视化任务等事件。",
+    "source": "北京师范大学-香港浸会大学联合国际学院课程设置",
+    "sourceUrl": "https://www.uic.edu.cn/virtual_attach_file.vsb?afc=nL8LS8o7CPozliozzMkMmviL7LaLR7lin7UbMzlPMlQRUNU0gihFp2hmCIa0n1yPoSh7n1y8oz9snmQ7LlrfMm6kMzrRMmvDLlLiM4CYM4MFUlVknRvsolQFMlCbLm-Jv2nto4OeosrXCDMJgDTJQty0Lz7YLkyPLzGZokbw62r8c&e=.pdf&nid=11088&tid=1120"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "系统解剖学",
+    "briefIntro": "学习人体结构和器官系统，是理解疾病和临床操作的基础。",
+    "usageHint": "适合生成解剖课、标本观察、背诵复习等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "生理学",
+    "briefIntro": "学习人体正常生命活动规律和机体功能调节机制。",
+    "usageHint": "适合生成基础医学课、实验课、图书馆复习等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "生物化学",
+    "briefIntro": "学习生命分子、代谢过程和人体生化机制。",
+    "usageHint": "适合生成理论课、实验课、考前背诵等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "病理学",
+    "briefIntro": "学习疾病发生发展过程和组织器官病变规律。",
+    "usageHint": "适合生成病理课、切片观察、病例分析等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "药理学",
+    "briefIntro": "学习药物作用机制、适应证、不良反应和临床用药基础。",
+    "usageHint": "适合生成药理课、用药案例讨论、记忆型自习等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "临床医学",
+    "courseName": "诊断学",
+    "briefIntro": "学习病史采集、体格检查和辅助检查等临床诊断基础。",
+    "usageHint": "适合生成技能训练、模拟问诊、临床实践准备等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "临床医学",
+    "courseName": "内科学",
+    "briefIntro": "学习常见内科疾病的诊断、治疗和临床思维。",
+    "usageHint": "适合生成临床课、病例讨论、医院见习等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "临床医学",
+    "courseName": "外科学",
+    "briefIntro": "学习外科疾病、手术原则和围手术期处理基础。",
+    "usageHint": "适合生成外科课、技能练习、手术观摩等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "特色选修",
+    "courseGroup": "医学人文",
+    "courseName": "医学伦理学",
+    "briefIntro": "讨论医疗实践中的伦理原则、医患关系和职业责任。",
+    "usageHint": "适合生成讨论课、案例辩论、职业认知类事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "特色选修",
+    "courseGroup": "医学人文",
+    "courseName": "医学心理学",
+    "briefIntro": "学习心理因素与健康、疾病和医疗沟通之间的关系。",
+    "usageHint": "适合生成人文选修课、沟通训练、案例分析等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "经济学基础",
+    "courseName": "微观经济学",
+    "briefIntro": "学习个体、企业和市场如何做出选择及资源配置逻辑。",
+    "usageHint": "适合生成经济学理论课、案例讨论、习题课等事件。",
+    "source": "东北财经大学经济学专业培养方案；中山大学工商管理专业介绍",
+    "sourceUrl": "https://econ.dufe.edu.cn/content_90636.html ; https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "经济学基础",
+    "courseName": "宏观经济学",
+    "briefIntro": "学习经济增长、通胀、就业、货币和财政政策等宏观问题。",
+    "usageHint": "适合生成政策分析课、课堂讨论、新闻解读等事件。",
+    "source": "东北财经大学经济学专业培养方案；中山大学工商管理专业介绍",
+    "sourceUrl": "https://econ.dufe.edu.cn/content_90636.html ; https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "管理基础",
+    "courseName": "管理学原理",
+    "briefIntro": "学习组织管理、计划、领导、控制等管理学基本框架。",
+    "usageHint": "适合生成管理课、小组展示、案例分析等事件。",
+    "source": "中山大学工商管理专业介绍",
+    "sourceUrl": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "财会与金融",
+    "courseName": "会计学原理",
+    "briefIntro": "学习企业经济活动的确认、计量、记录和报表表达。",
+    "usageHint": "适合生成会计课、报表练习、案例作业等事件。",
+    "source": "中山大学工商管理专业介绍；东北财经大学经济学专业培养方案",
+    "sourceUrl": "https://isbf.sysu.edu.cn/zh-hans/article/329 ; https://econ.dufe.edu.cn/content_90636.html"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "数据与方法",
+    "courseName": "统计学",
+    "briefIntro": "学习数据整理、描述、推断和统计分析的基本方法。",
+    "usageHint": "适合生成数据分析课、统计作业、商科量化任务等事件。",
+    "source": "东北财经大学经济学专业培养方案",
+    "sourceUrl": "https://econ.dufe.edu.cn/content_90636.html"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "数据与方法",
+    "courseName": "计量经济学",
+    "briefIntro": "学习用统计模型分析经济管理问题中的因果关系和数据规律。",
+    "usageHint": "适合生成数据建模课、实证分析、报告写作等事件。",
+    "source": "东北财经大学经济学专业培养方案；中山大学工商管理专业介绍",
+    "sourceUrl": "https://econ.dufe.edu.cn/content_90636.html ; https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "管理基础",
+    "courseName": "市场营销",
+    "briefIntro": "学习消费者需求、品牌、渠道和营销策略设计。",
+    "usageHint": "适合生成营销课、市场调研、小组策划等事件。",
+    "source": "中山大学工商管理专业介绍",
+    "sourceUrl": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "组织与战略",
+    "courseName": "组织行为学",
+    "briefIntro": "学习个体、团队和组织中的行为规律与管理方法。",
+    "usageHint": "适合生成团队讨论、管理案例、课堂展示等事件。",
+    "source": "中山大学工商管理专业介绍",
+    "sourceUrl": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "组织与战略",
+    "courseName": "战略管理",
+    "briefIntro": "学习企业如何分析环境、制定战略并形成竞争优势。",
+    "usageHint": "适合生成案例分析课、商业竞赛、战略汇报等事件。",
+    "source": "中山大学工商管理专业介绍",
+    "sourceUrl": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "特色选修",
+    "courseGroup": "数智商务",
+    "courseName": "大数据与商业智能",
+    "briefIntro": "学习商业数据分析、智能决策和数字化运营相关方法。",
+    "usageHint": "适合生成数智商务课、数据项目、商业分析事件。",
+    "source": "中山大学工商管理专业介绍",
+    "sourceUrl": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "特色选修",
+    "courseGroup": "创新创业",
+    "courseName": "创新管理",
+    "briefIntro": "学习企业创新过程、创新组织和新业务开发方法。",
+    "usageHint": "适合生成创业讨论、创新项目、商业计划书事件。",
+    "source": "中山大学工商管理专业介绍",
+    "sourceUrl": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "特色选修",
+    "courseGroup": "市场与用户",
+    "courseName": "数字营销",
+    "briefIntro": "学习数字渠道、用户数据和在线营销策略。",
+    "usageHint": "适合生成营销策划、新媒体运营、用户分析事件。",
+    "source": "中山大学工商管理专业介绍",
+    "sourceUrl": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学基础",
+    "courseName": "高等数学",
+    "briefIntro": "学习函数、极限、微积分等内容，是后续算法分析和数学建模的重要基础。",
+    "usageHint": "适合生成数学课、习题课、课后刷题等上课事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学基础",
+    "courseName": "线性代数",
+    "briefIntro": "学习向量、矩阵和线性变换，是图形学、机器学习和数据分析常用基础。",
+    "usageHint": "适合生成基础数学课、推导练习、AI方向准备等事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学基础",
+    "courseName": "概率论与数理统计",
+    "briefIntro": "学习随机现象、概率分布和统计推断，是机器学习、数据挖掘等方向的重要基础。",
+    "usageHint": "适合生成概率统计课、数据分析准备、考前复习等事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "计算机类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "工程基础",
+    "courseName": "程序设计基础",
+    "briefIntro": "学习编程语法、控制结构和基本问题求解方法，是进入专业课前的关键起点。",
+    "usageHint": "适合生成新生编程课、上机练习、基础作业等事件。",
+    "source": "南方科技大学计算机科学与技术专业介绍",
+    "sourceUrl": "https://cse.sustech.edu.cn/undergraduate/"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "自然科学基础",
+    "courseName": "医用化学",
+    "briefIntro": "学习医学相关的基础化学知识，为生物化学、药理学等课程打底。",
+    "usageHint": "适合生成基础课、实验准备、前期预习等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "自然科学基础",
+    "courseName": "医用物理学",
+    "briefIntro": "学习医学成像、力学和电学等相关物理基础，帮助理解仪器与人体机制。",
+    "usageHint": "适合生成基础理论课、实验导论、影像理解等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "生物学基础",
+    "courseName": "细胞生物学",
+    "briefIntro": "学习细胞结构、功能和生命活动机制，是后续基础医学课程的重要前置知识。",
+    "usageHint": "适合生成基础生物课、显微观察、背诵复习等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "医学类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "生物学基础",
+    "courseName": "医学遗传学",
+    "briefIntro": "学习遗传规律、基因与疾病之间的关系，为临床和科研理解提供基础。",
+    "usageHint": "适合生成理论课、病例分析、拓展阅读等事件。",
+    "source": "延安大学延安医学院专业介绍",
+    "sourceUrl": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学与方法",
+    "courseName": "高等数学",
+    "briefIntro": "学习微积分等基本数学工具，为经济学分析、统计学和计量方法提供基础。",
+    "usageHint": "适合生成基础数学课、习题训练、考试复习等事件。",
+    "source": "东北财经大学经济学专业培养方案",
+    "sourceUrl": "https://econ.dufe.edu.cn/content_90636.html"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学与方法",
+    "courseName": "线性代数",
+    "briefIntro": "学习矩阵和线性模型，是统计分析、计量经济学和数据建模的重要工具。",
+    "usageHint": "适合生成数学基础课、模型理解、数据方法预备等事件。",
+    "source": "东北财经大学经济学专业培养方案",
+    "sourceUrl": "https://econ.dufe.edu.cn/content_90636.html"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学与方法",
+    "courseName": "概率论与数理统计",
+    "briefIntro": "学习概率模型和统计推断，是数据分析、市场研究和计量方法的常用基础。",
+    "usageHint": "适合生成统计基础课、问卷分析、商业数据准备等事件。",
+    "source": "东北财经大学经济学专业培养方案",
+    "sourceUrl": "https://econ.dufe.edu.cn/content_90636.html"
+  },
+  {
+    "major": "经管类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "工具基础",
+    "courseName": "经济法基础",
+    "briefIntro": "学习企业经营和经济活动中常见的法律规则，帮助理解商业运行边界。",
+    "usageHint": "适合生成基础法商课、案例讨论、考试复习等事件。",
+    "source": "中山大学工商管理专业介绍",
+    "sourceUrl": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+  }
+]

@@ -1,0 +1,48 @@
+# Local data sheets
+*.xls
+*.xlsm
+*.xlsx
+数据统计例表.xlsx
+social_samples_template.xlsx
+*.tmp.xlsx
+~$*.xlsx
+
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+build/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local generated artifacts
+outputs/
+tmp/
+temp/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
