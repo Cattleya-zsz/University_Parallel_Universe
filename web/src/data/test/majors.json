@@ -1,0 +1,23 @@
+[
+  {
+    "id": "computer",
+    "name": "计算机类",
+    "icon": "💻",
+    "color": "#6366f1",
+    "description": "探索代码的世界"
+  },
+  {
+    "id": "medical",
+    "name": "医学类",
+    "icon": "🩺",
+    "color": "#22c55e",
+    "description": "守护健康的使命"
+  },
+  {
+    "id": "business",
+    "name": "经管类",
+    "icon": "📊",
+    "color": "#f59e0b",
+    "description": "商业思维的培养"
+  }
+]

@@ -1,0 +1,383 @@
+{
+  "computer": [
+    {
+      "id": "morning",
+      "period": "出发阶段",
+      "question": "新的一天开始了，你准备怎么进入状态？",
+      "options": [
+        {
+          "label": "提前到教学楼预习课程",
+          "event": "课前预习",
+          "locationId": "teaching_building",
+          "score": { "health": -1, "study": 2, "social": 0, "practice": 0, "pressure": 1 }
+        },
+        {
+          "label": "在宿舍完成简单的晨间锻炼",
+          "event": "晨间锻炼",
+          "locationId": "dorm",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "label": "约同学一起去食堂吃早餐",
+          "event": "早餐社交",
+          "locationId": "canteen",
+          "score": { "health": 1, "study": 0, "social": 2, "practice": 0, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "forenoon",
+      "period": "上午学习",
+      "question": "第一节课结束，接下来你想做什么？",
+      "options": [
+        {
+          "label": "去图书馆继续自习",
+          "event": "图书馆自习",
+          "locationId": "library",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 0, "pressure": 1 }
+        },
+        {
+          "label": "去实验室做编程练习",
+          "event": "编程实践",
+          "locationId": "lab",
+          "score": { "health": 0, "study": 1, "social": 0, "practice": 2, "pressure": 1 }
+        },
+        {
+          "label": "和同学讨论项目问题",
+          "event": "小组讨论",
+          "locationId": "cafe",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 1, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "noon",
+      "period": "午间调整",
+      "question": "午餐时间到了，你打算怎么安排？",
+      "options": [
+        {
+          "label": "快速吃完回宿舍午休",
+          "event": "午休充电",
+          "locationId": "dorm",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "label": "边吃饭边看技术视频",
+          "event": "学习充电",
+          "locationId": "canteen",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 0, "pressure": 1 }
+        },
+        {
+          "label": "参加社团技术分享会",
+          "event": "技术分享",
+          "locationId": "teaching_building",
+          "score": { "health": -1, "study": 1, "social": 2, "practice": 1, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "period": "下午安排",
+      "question": "下午的时间比较充裕，你想做什么？",
+      "options": [
+        {
+          "label": "继续做课程项目",
+          "event": "项目开发",
+          "locationId": "lab",
+          "score": { "health": -1, "study": 1, "social": 0, "practice": 2, "pressure": 1 }
+        },
+        {
+          "label": "去体育馆运动放松",
+          "event": "体育锻炼",
+          "locationId": "gym",
+          "score": { "health": 2, "study": 0, "social": 1, "practice": 0, "pressure": -2 }
+        },
+        {
+          "label": "参加行业技术讲座",
+          "event": "技术讲座",
+          "locationId": "teaching_building",
+          "score": { "health": 0, "study": 2, "social": 1, "practice": 1, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "period": "夜间选择",
+      "question": "晚上你打算如何度过？",
+      "options": [
+        {
+          "label": "在实验室继续调试代码",
+          "event": "代码调试",
+          "locationId": "lab",
+          "score": { "health": -2, "study": 2, "social": 0, "practice": 1, "pressure": 2 }
+        },
+        {
+          "label": "和室友玩游戏放松",
+          "event": "休闲娱乐",
+          "locationId": "dorm",
+          "score": { "health": 1, "study": 0, "social": 2, "practice": 0, "pressure": -2 }
+        },
+        {
+          "label": "整理笔记并制定明日计划",
+          "event": "规划复盘",
+          "locationId": "library",
+          "score": { "health": 0, "study": 1, "social": 0, "practice": 0, "pressure": 0 }
+        }
+      ]
+    }
+  ],
+  "medical": [
+    {
+      "id": "morning",
+      "period": "出发阶段",
+      "question": "新的一天开始了，你准备怎么进入状态？",
+      "options": [
+        {
+          "label": "提前到医院熟悉病房环境",
+          "event": "病房见习",
+          "locationId": "hospital",
+          "score": { "health": 0, "study": 2, "social": 1, "practice": 1, "pressure": 1 }
+        },
+        {
+          "label": "在操场慢跑锻炼",
+          "event": "晨间慢跑",
+          "locationId": "playground",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "label": "和同学一起复习医学术语",
+          "event": "早读复习",
+          "locationId": "library",
+          "score": { "health": 0, "study": 2, "social": 1, "practice": 0, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "forenoon",
+      "period": "上午学习",
+      "question": "理论课结束，接下来你想做什么？",
+      "options": [
+        {
+          "label": "去实验室做解剖练习",
+          "event": "解剖实验",
+          "locationId": "lab",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 2, "pressure": 1 }
+        },
+        {
+          "label": "去图书馆查阅医学文献",
+          "event": "文献查阅",
+          "locationId": "library",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 0, "pressure": 0 }
+        },
+        {
+          "label": "跟着老师查房学习",
+          "event": "临床查房",
+          "locationId": "hospital",
+          "score": { "health": -1, "study": 1, "social": 1, "practice": 2, "pressure": 1 }
+        }
+      ]
+    },
+    {
+      "id": "noon",
+      "period": "午间调整",
+      "question": "午餐时间到了，你打算怎么安排？",
+      "options": [
+        {
+          "label": "快速吃完去病房帮忙",
+          "event": "志愿帮忙",
+          "locationId": "hospital",
+          "score": { "health": -1, "study": 0, "social": 2, "practice": 1, "pressure": 0 }
+        },
+        {
+          "label": "好好休息恢复精力",
+          "event": "午间休息",
+          "locationId": "dorm",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "label": "和同学讨论病例",
+          "event": "病例讨论",
+          "locationId": "canteen",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 1, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "period": "下午安排",
+      "question": "下午的时间比较充裕，你想做什么？",
+      "options": [
+        {
+          "label": "参加临床技能培训",
+          "event": "技能培训",
+          "locationId": "hospital",
+          "score": { "health": 0, "study": 1, "social": 1, "practice": 2, "pressure": 1 }
+        },
+        {
+          "label": "去体育馆运动",
+          "event": "运动健身",
+          "locationId": "gym",
+          "score": { "health": 2, "study": 0, "social": 1, "practice": 0, "pressure": -2 }
+        },
+        {
+          "label": "整理课堂笔记",
+          "event": "整理笔记",
+          "locationId": "library",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 0, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "period": "夜间选择",
+      "question": "晚上你打算如何度过？",
+      "options": [
+        {
+          "label": "继续在医院值班学习",
+          "event": "夜间值班",
+          "locationId": "hospital",
+          "score": { "health": -2, "study": 2, "social": 1, "practice": 2, "pressure": 2 }
+        },
+        {
+          "label": "和家人视频通话",
+          "event": "亲情沟通",
+          "locationId": "dorm",
+          "score": { "health": 1, "study": 0, "social": 2, "practice": 0, "pressure": -1 }
+        },
+        {
+          "label": "复习今天学的医学知识",
+          "event": "知识复习",
+          "locationId": "library",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 0, "pressure": 1 }
+        }
+      ]
+    }
+  ],
+  "business": [
+    {
+      "id": "morning",
+      "period": "出发阶段",
+      "question": "新的一天开始了，你准备怎么进入状态？",
+      "options": [
+        {
+          "label": "阅读财经新闻了解市场动态",
+          "event": "财经阅读",
+          "locationId": "cafe",
+          "score": { "health": 0, "study": 2, "social": 1, "practice": 0, "pressure": 0 }
+        },
+        {
+          "label": "去操场做早操",
+          "event": "晨间运动",
+          "locationId": "playground",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "label": "参加学生会会议",
+          "event": "学生工作",
+          "locationId": "office",
+          "score": { "health": 0, "study": 0, "social": 2, "practice": 1, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "forenoon",
+      "period": "上午学习",
+      "question": "课程结束，接下来你想做什么？",
+      "options": [
+        {
+          "label": "去图书馆研究商业案例",
+          "event": "案例研究",
+          "locationId": "library",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 1, "pressure": 0 }
+        },
+        {
+          "label": "参加商业社团活动",
+          "event": "社团活动",
+          "locationId": "office",
+          "score": { "health": 0, "study": 0, "social": 2, "practice": 2, "pressure": 0 }
+        },
+        {
+          "label": "和同学组队准备商业比赛",
+          "event": "比赛准备",
+          "locationId": "cafe",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 1, "pressure": 1 }
+        }
+      ]
+    },
+    {
+      "id": "noon",
+      "period": "午间调整",
+      "question": "午餐时间到了，你打算怎么安排？",
+      "options": [
+        {
+          "label": "和教授一起午餐交流",
+          "event": "学术交流",
+          "locationId": "canteen",
+          "score": { "health": 0, "study": 1, "social": 2, "practice": 1, "pressure": 0 }
+        },
+        {
+          "label": "回宿舍小憩",
+          "event": "午休放松",
+          "locationId": "dorm",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -1 }
+        },
+        {
+          "label": "参加创业讲座",
+          "event": "创业讲座",
+          "locationId": "teaching_building",
+          "score": { "health": -1, "study": 2, "social": 1, "practice": 1, "pressure": 0 }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "period": "下午安排",
+      "question": "下午的时间比较充裕，你想做什么？",
+      "options": [
+        {
+          "label": "去企业参观实习",
+          "event": "企业实习",
+          "locationId": "office",
+          "score": { "health": 0, "study": 1, "social": 1, "practice": 2, "pressure": 1 }
+        },
+        {
+          "label": "去健身房锻炼",
+          "event": "健身运动",
+          "locationId": "gym",
+          "score": { "health": 2, "study": 0, "social": 0, "practice": 0, "pressure": -2 }
+        },
+        {
+          "label": "完成课程论文",
+          "event": "论文写作",
+          "locationId": "library",
+          "score": { "health": 0, "study": 2, "social": 0, "practice": 0, "pressure": 1 }
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "period": "夜间选择",
+      "question": "晚上你打算如何度过？",
+      "options": [
+        {
+          "label": "参加商业社交晚宴",
+          "event": "社交晚宴",
+          "locationId": "canteen",
+          "score": { "health": 0, "study": 0, "social": 2, "practice": 1, "pressure": 1 }
+        },
+        {
+          "label": "在宿舍看电影放松",
+          "event": "休闲娱乐",
+          "locationId": "dorm",
+          "score": { "health": 1, "study": 0, "social": 1, "practice": 0, "pressure": -2 }
+        },
+        {
+          "label": "准备明天的课堂展示",
+          "event": "展示准备",
+          "locationId": "library",
+          "score": { "health": -1, "study": 2, "social": 0, "practice": 1, "pressure": 1 }
+        }
+      ]
+    }
+  ]
+}
