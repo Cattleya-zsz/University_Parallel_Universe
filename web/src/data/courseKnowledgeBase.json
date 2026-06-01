@@ -1,0 +1,1593 @@
+[
+  {
+    "id": "computer-course-01",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "程序与算法",
+    "courseName": "数据结构与算法分析",
+    "learningContent": [
+      "学习常见数据组织方式和算法思想，是编程能力与算法训练的核心基础。",
+      "了解它在计算机类中属于“程序与算法”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "程序设计",
+      "刷题训练",
+      "推荐系统",
+      "技术面试"
+    ],
+    "highSchoolFriendlyIntro": "如果你喜欢解谜和拆步骤，这门课会很有代表性。它像是计算机专业的思维体操。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“数据结构与算法分析学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成刷题、算法课、代码实验等上课事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-02",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "数学与理论基础",
+    "courseName": "离散数学",
+    "learningContent": [
+      "学习集合、图、逻辑等离散结构，为算法、数据库和计算理论打基础。",
+      "了解它在计算机类中属于“数学与理论基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "算法设计",
+      "数据库",
+      "网络结构",
+      "人工智能基础"
+    ],
+    "highSchoolFriendlyIntro": "这门课更像训练严谨表达。它会让你理解为什么程序背后也有数学骨架。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“离散数学学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成理论课、课后推导、自习复盘等事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-03",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "计算机系统",
+    "courseName": "计算机组成原理",
+    "learningContent": [
+      "理解计算机硬件组成、指令执行和系统运行机制。",
+      "了解它在计算机类中属于“计算机系统”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "硬件理解",
+      "系统优化",
+      "嵌入式开发",
+      "操作系统学习"
+    ],
+    "highSchoolFriendlyIntro": "它会带你走进电脑内部，看看一行代码到底怎样被机器执行。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“计算机组成原理学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成硬件基础课、实验课、系统原理复习等事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-04",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "计算机系统",
+    "courseName": "计算机操作系统",
+    "learningContent": [
+      "学习进程、内存、文件系统等操作系统核心机制。",
+      "了解它在计算机类中属于“计算机系统”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "挑战",
+      "score": 5,
+      "reasonForHighSchoolStudents": "综合性强，通常要把多门基础课连起来理解。"
+    },
+    "applicationAreas": [
+      "系统开发",
+      "服务器运维",
+      "性能优化",
+      "云计算平台"
+    ],
+    "highSchoolFriendlyIntro": "如果说电脑是城市，操作系统就像交通、仓库和管理规则。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“计算机操作系统学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成系统课、实验调试、熬夜debug等事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-05",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "网络与系统",
+    "courseName": "计算机网络",
+    "learningContent": [
+      "学习网络分层、协议、传输和应用通信原理。",
+      "了解它在计算机类中属于“网络与系统”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "网站开发",
+      "网络安全",
+      "云服务",
+      "物联网通信"
+    ],
+    "highSchoolFriendlyIntro": "你每天都在用网络，这门课会解释消息、网页和视频怎样跨越设备到达你面前。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“计算机网络学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成网络课、抓包实验、课程项目等事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-06",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业必修",
+    "courseGroup": "软件与理论",
+    "courseName": "编译原理",
+    "learningContent": [
+      "学习程序语言从源码到可执行形式的翻译过程和基本方法。",
+      "了解它在计算机类中属于“软件与理论”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "挑战",
+      "score": 5,
+      "reasonForHighSchoolStudents": "综合性强，通常要把多门基础课连起来理解。"
+    },
+    "applicationAreas": [
+      "编程语言",
+      "编译器",
+      "代码分析工具",
+      "开发工具链"
+    ],
+    "highSchoolFriendlyIntro": "它会回答一个很酷的问题：为什么你写的代码，电脑最后真的能读懂？",
+    "aiConsultationHints": [
+      "适合回答高中生关于“编译原理学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成高难度理论课、课程设计、实验报告等事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-07",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "特色选修",
+    "courseGroup": "人工智能",
+    "courseName": "人工智能导论",
+    "learningContent": [
+      "了解机器学习、搜索、知识表示等人工智能基本概念和应用场景。",
+      "了解它在计算机类中属于“人工智能”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "智能助手",
+      "图像识别",
+      "推荐系统",
+      "自动驾驶"
+    ],
+    "highSchoolFriendlyIntro": "这门课适合对 AI 好奇的同学，会让你知道 AI 大概怎么学会东西。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“人工智能导论学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成AI选修课、模型实验、兴趣探索等事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-08",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "特色选修",
+    "courseGroup": "网络与安全",
+    "courseName": "计算机和网络安全",
+    "learningContent": [
+      "学习系统与网络安全基础，理解常见攻击、防护和安全实践。",
+      "了解它在计算机类中属于“网络与安全”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "网站开发",
+      "网络安全",
+      "云服务",
+      "物联网通信"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近计算机类的一个重要侧面。它会帮你理解软件、算法、系统和智能应用是怎样被一步步做出来的。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“计算机和网络安全学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成安全实验、攻防社团、技术实践等事件。"
+    ],
+    "source": {
+      "name": "北京师范大学-香港浸会大学联合国际学院课程设置",
+      "url": "https://www.uic.edu.cn/virtual_attach_file.vsb?afc=nL8LS8o7CPozliozzMkMmviL7LaLR7lin7UbMzlPMlQRUNU0gihFp2hmCIa0n1yPoSh7n1y8oz9snmQ7LlrfMm6kMzrRMmvDLlLiM4CYM4MFUlVknRvsolQFMlCbLm-Jv2nto4OeosrXCDMJgDTJQty0Lz7YLkyPLzGZokbw62r8c&e=.pdf&nid=11088&tid=1120"
+    }
+  },
+  {
+    "id": "computer-course-09",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "特色选修",
+    "courseGroup": "数据与应用",
+    "courseName": "数据挖掘与知识发现",
+    "learningContent": [
+      "学习从数据中发现规律、模式和可用知识的方法。",
+      "了解它在计算机类中属于“数据与应用”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "商业分析",
+      "用户画像",
+      "推荐系统",
+      "风险识别"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近计算机类的一个重要侧面。它会帮你理解软件、算法、系统和智能应用是怎样被一步步做出来的。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“数据挖掘与知识发现学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成数据分析课、项目实践、可视化任务等事件。"
+    ],
+    "source": {
+      "name": "北京师范大学-香港浸会大学联合国际学院课程设置",
+      "url": "https://www.uic.edu.cn/virtual_attach_file.vsb?afc=nL8LS8o7CPozliozzMkMmviL7LaLR7lin7UbMzlPMlQRUNU0gihFp2hmCIa0n1yPoSh7n1y8oz9snmQ7LlrfMm6kMzrRMmvDLlLiM4CYM4MFUlVknRvsolQFMlCbLm-Jv2nto4OeosrXCDMJgDTJQty0Lz7YLkyPLzGZokbw62r8c&e=.pdf&nid=11088&tid=1120"
+    }
+  },
+  {
+    "id": "medicine-course-10",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "系统解剖学",
+    "learningContent": [
+      "学习人体结构和器官系统，是理解疾病和临床操作的基础。",
+      "了解它在医学类中属于“基础医学”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "临床诊断",
+      "外科基础",
+      "影像理解",
+      "康复医学"
+    ],
+    "highSchoolFriendlyIntro": "它像是医学专业的人体地图课。如果你想学医，这通常是很早会遇到的基础课。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“系统解剖学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成解剖课、标本观察、背诵复习等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-11",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "生理学",
+    "learningContent": [
+      "学习人体正常生命活动规律和机体功能调节机制。",
+      "了解它在医学类中属于“基础医学”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "临床医学",
+      "运动健康",
+      "药物作用理解",
+      "生命科学研究"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“生理学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成基础医学课、实验课、图书馆复习等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-12",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "生物化学",
+    "learningContent": [
+      "学习生命分子、代谢过程和人体生化机制。",
+      "了解它在医学类中属于“基础医学”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "挑战",
+      "score": 5,
+      "reasonForHighSchoolStudents": "综合性强，通常要把多门基础课连起来理解。"
+    },
+    "applicationAreas": [
+      "医学检验",
+      "药物研发",
+      "营养代谢",
+      "疾病机制研究"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“生物化学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成理论课、实验课、考前背诵等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-13",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "病理学",
+    "learningContent": [
+      "学习疾病发生发展过程和组织器官病变规律。",
+      "了解它在医学类中属于“基础医学”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "挑战",
+      "score": 5,
+      "reasonForHighSchoolStudents": "综合性强，通常要把多门基础课连起来理解。"
+    },
+    "applicationAreas": [
+      "疾病诊断",
+      "病例分析",
+      "医学研究",
+      "病理检验"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“病理学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成病理课、切片观察、病例分析等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-14",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "基础医学",
+    "courseName": "药理学",
+    "learningContent": [
+      "学习药物作用机制、适应证、不良反应和临床用药基础。",
+      "了解它在医学类中属于“基础医学”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "临床用药",
+      "药物研发",
+      "药品安全",
+      "健康咨询"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“药理学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成药理课、用药案例讨论、记忆型自习等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-15",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "临床医学",
+    "courseName": "诊断学",
+    "learningContent": [
+      "学习病史采集、体格检查和辅助检查等临床诊断基础。",
+      "了解它在医学类中属于“临床医学”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "临床问诊",
+      "体格检查",
+      "病例分析",
+      "医院见习"
+    ],
+    "highSchoolFriendlyIntro": "它会让你体验医生如何从一句我不舒服开始，一步步寻找线索。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“诊断学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成技能训练、模拟问诊、临床实践准备等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-16",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "临床医学",
+    "courseName": "内科学",
+    "learningContent": [
+      "学习常见内科疾病的诊断、治疗和临床思维。",
+      "了解它在医学类中属于“临床医学”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "挑战",
+      "score": 5,
+      "reasonForHighSchoolStudents": "综合性强，通常要把多门基础课连起来理解。"
+    },
+    "applicationAreas": [
+      "医院临床",
+      "慢病管理",
+      "健康评估",
+      "医学研究"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“内科学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成临床课、病例讨论、医院见习等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-17",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业必修",
+    "courseGroup": "临床医学",
+    "courseName": "外科学",
+    "learningContent": [
+      "学习外科疾病、手术原则和围手术期处理基础。",
+      "了解它在医学类中属于“临床医学”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "挑战",
+      "score": 5,
+      "reasonForHighSchoolStudents": "综合性强，通常要把多门基础课连起来理解。"
+    },
+    "applicationAreas": [
+      "外科临床",
+      "急诊处理",
+      "手术观摩",
+      "医学技能训练"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“外科学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成外科课、技能练习、手术观摩等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-18",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "特色选修",
+    "courseGroup": "医学人文",
+    "courseName": "医学伦理学",
+    "learningContent": [
+      "讨论医疗实践中的伦理原则、医患关系和职业责任。",
+      "了解它在医学类中属于“医学人文”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "医患沟通",
+      "医疗决策",
+      "公共卫生",
+      "职业认知"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“医学伦理学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成讨论课、案例辩论、职业认知类事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-19",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "特色选修",
+    "courseGroup": "医学人文",
+    "courseName": "医学心理学",
+    "learningContent": [
+      "学习心理因素与健康、疾病和医疗沟通之间的关系。",
+      "了解它在医学类中属于“医学人文”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "医患沟通",
+      "心理健康",
+      "康复支持",
+      "健康教育"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“医学心理学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成人文选修课、沟通训练、案例分析等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "business-course-20",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "经济学基础",
+    "courseName": "微观经济学",
+    "learningContent": [
+      "学习个体、企业和市场如何做出选择及资源配置逻辑。",
+      "了解它在经管类中属于“经济学基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "市场分析",
+      "政策理解",
+      "商业决策",
+      "新闻解读"
+    ],
+    "highSchoolFriendlyIntro": "它会解释为什么奶茶涨价、平台打折、商家促销背后都有选择逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“微观经济学学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成经济学理论课、案例讨论、习题课等事件。"
+    ],
+    "source": {
+      "name": "东北财经大学经济学专业培养方案；中山大学工商管理专业介绍",
+      "url": "https://econ.dufe.edu.cn/content_90636.html ; https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "business-course-21",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "经济学基础",
+    "courseName": "宏观经济学",
+    "learningContent": [
+      "学习经济增长、通胀、就业、货币和财政政策等宏观问题。",
+      "了解它在经管类中属于“经济学基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "市场分析",
+      "政策理解",
+      "商业决策",
+      "新闻解读"
+    ],
+    "highSchoolFriendlyIntro": "它会把新闻里的 GDP、通胀、就业这些词连成一张更大的图。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“宏观经济学学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成政策分析课、课堂讨论、新闻解读等事件。"
+    ],
+    "source": {
+      "name": "东北财经大学经济学专业培养方案；中山大学工商管理专业介绍",
+      "url": "https://econ.dufe.edu.cn/content_90636.html ; https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "business-course-22",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "管理基础",
+    "courseName": "管理学原理",
+    "learningContent": [
+      "学习组织管理、计划、领导、控制等管理学基本框架。",
+      "了解它在经管类中属于“管理基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "入门",
+      "score": 2,
+      "reasonForHighSchoolStudents": "概念比较容易接近，适合先建立兴趣和基本认识。"
+    },
+    "applicationAreas": [
+      "团队管理",
+      "企业运营",
+      "项目组织",
+      "商业决策"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“管理学原理学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成管理课、小组展示、案例分析等事件。"
+    ],
+    "source": {
+      "name": "中山大学工商管理专业介绍",
+      "url": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "business-course-23",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "财会与金融",
+    "courseName": "会计学原理",
+    "learningContent": [
+      "学习企业经济活动的确认、计量、记录和报表表达。",
+      "了解它在经管类中属于“财会与金融”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "企业财务",
+      "投资分析",
+      "审计基础",
+      "创业记账"
+    ],
+    "highSchoolFriendlyIntro": "它像是学习企业的记账语言，帮你看懂一家公司钱从哪里来、花到哪里去。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“会计学原理学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成会计课、报表练习、案例作业等事件。"
+    ],
+    "source": {
+      "name": "中山大学工商管理专业介绍；东北财经大学经济学专业培养方案",
+      "url": "https://isbf.sysu.edu.cn/zh-hans/article/329 ; https://econ.dufe.edu.cn/content_90636.html"
+    }
+  },
+  {
+    "id": "business-course-24",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "数据与方法",
+    "courseName": "统计学",
+    "learningContent": [
+      "学习数据整理、描述、推断和统计分析的基本方法。",
+      "了解它在经管类中属于“数据与方法”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "数据分析",
+      "市场研究",
+      "社会调查",
+      "商业决策"
+    ],
+    "highSchoolFriendlyIntro": "它会帮你判断一组数据到底说明了什么，也提醒你不要轻易被数字骗到。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“统计学学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成数据分析课、统计作业、商科量化任务等事件。"
+    ],
+    "source": {
+      "name": "东北财经大学经济学专业培养方案",
+      "url": "https://econ.dufe.edu.cn/content_90636.html"
+    }
+  },
+  {
+    "id": "business-course-25",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "数据与方法",
+    "courseName": "计量经济学",
+    "learningContent": [
+      "学习用统计模型分析经济管理问题中的因果关系和数据规律。",
+      "了解它在经管类中属于“数据与方法”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "挑战",
+      "score": 5,
+      "reasonForHighSchoolStudents": "综合性强，通常要把多门基础课连起来理解。"
+    },
+    "applicationAreas": [
+      "市场分析",
+      "政策理解",
+      "商业决策",
+      "新闻解读"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“计量经济学学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成数据建模课、实证分析、报告写作等事件。"
+    ],
+    "source": {
+      "name": "东北财经大学经济学专业培养方案；中山大学工商管理专业介绍",
+      "url": "https://econ.dufe.edu.cn/content_90636.html ; https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "business-course-26",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "管理基础",
+    "courseName": "市场营销",
+    "learningContent": [
+      "学习消费者需求、品牌、渠道和营销策略设计。",
+      "了解它在经管类中属于“管理基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "入门",
+      "score": 2,
+      "reasonForHighSchoolStudents": "概念比较容易接近，适合先建立兴趣和基本认识。"
+    },
+    "applicationAreas": [
+      "品牌策划",
+      "新媒体运营",
+      "用户研究",
+      "产品推广"
+    ],
+    "highSchoolFriendlyIntro": "它会解释为什么有些广告让人想买，有些产品能突然流行起来。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“市场营销学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成营销课、市场调研、小组策划等事件。"
+    ],
+    "source": {
+      "name": "中山大学工商管理专业介绍",
+      "url": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "business-course-27",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "组织与战略",
+    "courseName": "组织行为学",
+    "learningContent": [
+      "学习个体、团队和组织中的行为规律与管理方法。",
+      "了解它在经管类中属于“组织与战略”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "人力资源",
+      "团队协作",
+      "组织管理",
+      "领导力训练"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“组织行为学学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成团队讨论、管理案例、课堂展示等事件。"
+    ],
+    "source": {
+      "name": "中山大学工商管理专业介绍",
+      "url": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "business-course-28",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业必修",
+    "courseGroup": "组织与战略",
+    "courseName": "战略管理",
+    "learningContent": [
+      "学习企业如何分析环境、制定战略并形成竞争优势。",
+      "了解它在经管类中属于“组织与战略”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "团队管理",
+      "企业运营",
+      "项目组织",
+      "商业决策"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“战略管理学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成案例分析课、商业竞赛、战略汇报等事件。"
+    ],
+    "source": {
+      "name": "中山大学工商管理专业介绍",
+      "url": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "business-course-29",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "特色选修",
+    "courseGroup": "数智商务",
+    "courseName": "大数据与商业智能",
+    "learningContent": [
+      "学习商业数据分析、智能决策和数字化运营相关方法。",
+      "了解它在经管类中属于“数智商务”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "商业分析",
+      "数字化运营",
+      "用户增长",
+      "管理决策"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“大数据与商业智能学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成数智商务课、数据项目、商业分析事件。"
+    ],
+    "source": {
+      "name": "中山大学工商管理专业介绍",
+      "url": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "business-course-30",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "特色选修",
+    "courseGroup": "创新创业",
+    "courseName": "创新管理",
+    "learningContent": [
+      "学习企业创新过程、创新组织和新业务开发方法。",
+      "了解它在经管类中属于“创新创业”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "团队管理",
+      "企业运营",
+      "项目组织",
+      "商业决策"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“创新管理学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成创业讨论、创新项目、商业计划书事件。"
+    ],
+    "source": {
+      "name": "中山大学工商管理专业介绍",
+      "url": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "business-course-31",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "特色选修",
+    "courseGroup": "市场与用户",
+    "courseName": "数字营销",
+    "learningContent": [
+      "学习数字渠道、用户数据和在线营销策略。",
+      "了解它在经管类中属于“市场与用户”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "品牌策划",
+      "新媒体运营",
+      "用户研究",
+      "产品推广"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“数字营销学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成营销策划、新媒体运营、用户分析事件。"
+    ],
+    "source": {
+      "name": "中山大学工商管理专业介绍",
+      "url": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  },
+  {
+    "id": "computer-course-32",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学基础",
+    "courseName": "高等数学",
+    "learningContent": [
+      "学习函数、极限、微积分等内容，是后续算法分析和数学建模的重要基础。",
+      "了解它在计算机类中属于“数学基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "工程建模",
+      "经济分析",
+      "机器学习",
+      "科学研究"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近计算机类的一个重要侧面。它会帮你理解软件、算法、系统和智能应用是怎样被一步步做出来的。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“高等数学学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成数学课、习题课、课后刷题等上课事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-33",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学基础",
+    "courseName": "线性代数",
+    "learningContent": [
+      "学习向量、矩阵和线性变换，是图形学、机器学习和数据分析常用基础。",
+      "了解它在计算机类中属于“数学基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "数据分析",
+      "机器学习",
+      "图形图像",
+      "经济模型"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近计算机类的一个重要侧面。它会帮你理解软件、算法、系统和智能应用是怎样被一步步做出来的。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“线性代数学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成基础数学课、推导练习、AI方向准备等事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-34",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学基础",
+    "courseName": "概率论与数理统计",
+    "learningContent": [
+      "学习随机现象、概率分布和统计推断，是机器学习、数据挖掘等方向的重要基础。",
+      "了解它在计算机类中属于“数学基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "数据分析",
+      "市场研究",
+      "社会调查",
+      "商业决策"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近计算机类的一个重要侧面。它会帮你理解软件、算法、系统和智能应用是怎样被一步步做出来的。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“概率论与数理统计学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成概率统计课、数据分析准备、考前复习等事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "computer-course-35",
+    "majorId": "computer",
+    "major": "计算机类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "工程基础",
+    "courseName": "程序设计基础",
+    "learningContent": [
+      "学习编程语法、控制结构和基本问题求解方法，是进入专业课前的关键起点。",
+      "了解它在计算机类中属于“工程基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "入门",
+      "score": 2,
+      "reasonForHighSchoolStudents": "概念比较容易接近，适合先建立兴趣和基本认识。"
+    },
+    "applicationAreas": [
+      "软件开发",
+      "自动化工具",
+      "数据处理",
+      "算法学习"
+    ],
+    "highSchoolFriendlyIntro": "这是写代码的起点。你会第一次感受到，让电脑按你的想法做事可以怎样开始。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“程序设计基础学什么”的问题。",
+      "适合解释这门课和计算机类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成新生编程课、上机练习、基础作业等事件。"
+    ],
+    "source": {
+      "name": "南方科技大学计算机科学与技术专业介绍",
+      "url": "https://cse.sustech.edu.cn/undergraduate/"
+    }
+  },
+  {
+    "id": "medicine-course-36",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "自然科学基础",
+    "courseName": "医用化学",
+    "learningContent": [
+      "学习医学相关的基础化学知识，为生物化学、药理学等课程打底。",
+      "了解它在医学类中属于“自然科学基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "药物理解",
+      "生物化学",
+      "医学检验",
+      "营养代谢"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“医用化学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成基础课、实验准备、前期预习等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-37",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "自然科学基础",
+    "courseName": "医用物理学",
+    "learningContent": [
+      "学习医学成像、力学和电学等相关物理基础，帮助理解仪器与人体机制。",
+      "了解它在医学类中属于“自然科学基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "医学影像",
+      "医疗仪器",
+      "康复工程",
+      "临床检测"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“医用物理学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成基础理论课、实验导论、影像理解等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-38",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "生物学基础",
+    "courseName": "细胞生物学",
+    "learningContent": [
+      "学习细胞结构、功能和生命活动机制，是后续基础医学课程的重要前置知识。",
+      "了解它在医学类中属于“生物学基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "基础医学",
+      "生命科学研究",
+      "疾病机制",
+      "生物技术"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“细胞生物学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成基础生物课、显微观察、背诵复习等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "medicine-course-39",
+    "majorId": "medicine",
+    "major": "医学类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "生物学基础",
+    "courseName": "医学遗传学",
+    "learningContent": [
+      "学习遗传规律、基因与疾病之间的关系，为临床和科研理解提供基础。",
+      "了解它在医学类中属于“生物学基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "遗传病诊断",
+      "精准医学",
+      "生物医学研究",
+      "产前筛查"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近医学类的一个重要侧面。它会帮你理解人体、疾病和医疗实践之间的关系。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“医学遗传学学什么”的问题。",
+      "适合解释这门课和医学类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成理论课、病例分析、拓展阅读等事件。"
+    ],
+    "source": {
+      "name": "延安大学延安医学院专业介绍",
+      "url": "https://yxy.yau.edu.cn/bkjy/zyjs.htm"
+    }
+  },
+  {
+    "id": "business-course-40",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学与方法",
+    "courseName": "高等数学",
+    "learningContent": [
+      "学习微积分等基本数学工具，为经济学分析、统计学和计量方法提供基础。",
+      "了解它在经管类中属于“数学与方法”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "较难",
+      "score": 4,
+      "reasonForHighSchoolStudents": "抽象度或记忆量较高，需要耐心和持续练习。"
+    },
+    "applicationAreas": [
+      "工程建模",
+      "经济分析",
+      "机器学习",
+      "科学研究"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“高等数学学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成基础数学课、习题训练、考试复习等事件。"
+    ],
+    "source": {
+      "name": "东北财经大学经济学专业培养方案",
+      "url": "https://econ.dufe.edu.cn/content_90636.html"
+    }
+  },
+  {
+    "id": "business-course-41",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学与方法",
+    "courseName": "线性代数",
+    "learningContent": [
+      "学习矩阵和线性模型，是统计分析、计量经济学和数据建模的重要工具。",
+      "了解它在经管类中属于“数学与方法”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "数据分析",
+      "机器学习",
+      "图形图像",
+      "经济模型"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“线性代数学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成数学基础课、模型理解、数据方法预备等事件。"
+    ],
+    "source": {
+      "name": "东北财经大学经济学专业培养方案",
+      "url": "https://econ.dufe.edu.cn/content_90636.html"
+    }
+  },
+  {
+    "id": "business-course-42",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "数学与方法",
+    "courseName": "概率论与数理统计",
+    "learningContent": [
+      "学习概率模型和统计推断，是数据分析、市场研究和计量方法的常用基础。",
+      "了解它在经管类中属于“数学与方法”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "适中",
+      "score": 3,
+      "reasonForHighSchoolStudents": "需要一定理解和练习，但可以通过例子慢慢进入状态。"
+    },
+    "applicationAreas": [
+      "数据分析",
+      "市场研究",
+      "社会调查",
+      "商业决策"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“概率论与数理统计学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成统计基础课、问卷分析、商业数据准备等事件。"
+    ],
+    "source": {
+      "name": "东北财经大学经济学专业培养方案",
+      "url": "https://econ.dufe.edu.cn/content_90636.html"
+    }
+  },
+  {
+    "id": "business-course-43",
+    "majorId": "business",
+    "major": "经管类",
+    "courseCategory": "专业基础课",
+    "courseGroup": "工具基础",
+    "courseName": "经济法基础",
+    "learningContent": [
+      "学习企业经营和经济活动中常见的法律规则，帮助理解商业运行边界。",
+      "了解它在经管类中属于“工具基础”这一类知识。",
+      "通过课堂、练习、案例或实验，把抽象概念和真实专业场景联系起来。"
+    ],
+    "learningDifficulty": {
+      "level": "入门",
+      "score": 2,
+      "reasonForHighSchoolStudents": "概念比较容易接近，适合先建立兴趣和基本认识。"
+    },
+    "applicationAreas": [
+      "企业经营",
+      "合同管理",
+      "创业合规",
+      "消费者权益"
+    ],
+    "highSchoolFriendlyIntro": "这门课会帮助你靠近经管类的一个重要侧面。它会帮你理解市场、组织、数据和商业决策背后的逻辑。",
+    "aiConsultationHints": [
+      "适合回答高中生关于“经济法基础学什么”的问题。",
+      "适合解释这门课和经管类日常体验的关系。",
+      "回答时避免堆术语，优先使用生活类比和一两个大学场景说明。"
+    ],
+    "relatedExperienceEvents": [
+      "适合生成基础法商课、案例讨论、考试复习等事件。"
+    ],
+    "source": {
+      "name": "中山大学工商管理专业介绍",
+      "url": "https://isbf.sysu.edu.cn/zh-hans/article/329"
+    }
+  }
+]

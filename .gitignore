@@ -41,6 +41,9 @@ outputs/
 tmp/
 temp/
 
+# Local collaboration notes
+docs/GIT_COLLABORATION_GUIDE.md
+
 # Editor and OS files
 .DS_Store
 Thumbs.db
