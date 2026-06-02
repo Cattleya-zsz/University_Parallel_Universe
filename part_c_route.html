@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part C - 校园推荐路线</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        .description {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: center;
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .route-list {
+            list-style: none;
+            padding: 0;
+        }
+        .route-item {
+            background: #f8f9fa;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            transition: all 0.3s ease;
+        }
+        .route-item:hover {
+            transform: translateX(10px);
+            background: #e8f4fd;
+        }
+        .route-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .route-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .route-desc {
+            color: #7f8c8d;
+            margin-top: 8px;
+            margin-left: 45px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px dashed #ddd;
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        .arrow {
+            text-align: center;
+            color: #3498db;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Part C - 校园推荐路线</h1>
+        
+        <div class="description">
+            从学校正门到图书馆的推荐路线，带你领略校园美景！
+        </div>
+        
+        <ul class="route-list">
+            <li class="route-item">
+                <span class="route-number">1</span>
+                <span class="route-name">正门</span>
+                <div class="route-desc">出发点，校园的南大门</div>
+            </li>
+            
+            <li class="arrow">↓</li>
+            
+            <li class="route-item">
+                <span class="route-number">2</span>
+                <span class="route-name">第一教学楼</span>
+                <div class="route-desc">经过主教学楼，感受学术氛围</div>
+            </li>
+            
+            <li class="arrow">↓</li>
+            
+            <li class="route-item">
+                <span class="route-number">3</span>
+                <span class="route-name">食堂</span>
+                <div class="route-desc">如果饿了，这里是补充能量的好地方</div>
+            </li>
+            
+            <li class="arrow">↓</li>
+            
+            <li class="route-item">
+                <span class="route-number">4</span>
+                <span class="route-name">图书馆</span>
+                <div class="route-desc">终点，知识的海洋，开始学习吧！</div>
+            </li>
+        </ul>
+        
+        <div class="footer">
+            成员 C 完成
+        </div>
+    </div>
+</body>
+</html>
