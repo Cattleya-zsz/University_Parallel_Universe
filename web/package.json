@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:ai": "node ../backend/server.mjs",
+    "validate:data": "node ../tools/validate_project_data.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from 'react'
 import ScorePanel from '../components/ScorePanel'
 import CampusMap from '../components/CampusMap'
 import CourseChat from '../components/CourseChat'
@@ -5,20 +6,76 @@ import locations from '../data/locations.json'
 import coreCourses from '../data/coreCourses.json'
 import { generateProfile } from '../utils/profile.js'
 import { buildRouteFromOptions } from '../utils/route.js'
-import { generateDayEvaluation } from '../utils/dayEvaluation.js'
+import { generateDayEvaluation, requestAIDayEvaluation } from '../utils/dayEvaluation.js'
 
 function Result({ selectedMajor, selectedOptions, scores, onRestart, onGoHome }) {
   const profile = generateProfile(scores)
-  const evaluation = generateDayEvaluation({
-    majorId: selectedMajor?.id,
-    selectedOptions,
-    scores,
-    coreCourses
+  const evaluation = useMemo(
+    () => generateDayEvaluation({
+      majorId: selectedMajor?.id,
+      selectedOptions,
+      scores,
+      coreCourses
+    }),
+    [selectedMajor?.id, selectedOptions, scores]
+  )
+  const [aiEvaluation, setAiEvaluation] = useState({
+    answer: '',
+    notice: '',
+    source: '',
+    isLoading: false,
+    error: ''
   })
   const routeIds = buildRouteFromOptions(selectedOptions)
   const routeLocations = routeIds
     .map(locationId => locations.find(loc => loc.id === locationId))
     .filter(Boolean)
+  const finalEvaluationText = aiEvaluation.answer || evaluation.closingMessage
+  const aiSourceLabel = aiEvaluation.isLoading
+    ? 'AI 正在生成'
+    : aiEvaluation.source === 'deepseek'
+      ? 'DeepSeek 生成'
+      : '本地兜底评价'
+
+  useEffect(() => {
+    let isMounted = true
+
+    setAiEvaluation({
+      answer: '',
+      notice: '',
+      source: '',
+      isLoading: true,
+      error: ''
+    })
+
+    requestAIDayEvaluation(evaluation.aiEvaluationRequest.body)
+      .then((data) => {
+        if (!isMounted) return
+
+        setAiEvaluation({
+          answer: data?.answer || evaluation.closingMessage,
+          notice: data?.notice || '',
+          source: data?.source || 'local-fallback',
+          isLoading: false,
+          error: ''
+        })
+      })
+      .catch((error) => {
+        if (!isMounted) return
+
+        setAiEvaluation({
+          answer: evaluation.closingMessage,
+          notice: '',
+          source: 'frontend-fallback',
+          isLoading: false,
+          error: error instanceof Error ? error.message : 'AI day evaluation request failed.'
+        })
+      })
+
+    return () => {
+      isMounted = false
+    }
+  }, [evaluation])
 
   return (
     <div className="result-page">
@@ -102,7 +159,16 @@ function Result({ selectedMajor, selectedOptions, scores, onRestart, onGoHome })
           </div>
         </div>
 
-        <p className="closing-message">{evaluation.closingMessage}</p>
+        <div className="ai-evaluation-card">
+          <div className="ai-evaluation-meta">
+            <span>{aiSourceLabel}</span>
+            {aiEvaluation.notice && <span>{aiEvaluation.notice}</span>}
+            {aiEvaluation.error && <span>AI 暂时不可用，已显示本地评价</span>}
+          </div>
+          <p className="closing-message">
+            {aiEvaluation.isLoading ? '正在整理你的最终体验评价...' : finalEvaluationText}
+          </p>
+        </div>
       </div>
 
       <div className="course-chat-section">

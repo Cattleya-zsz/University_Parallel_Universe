@@ -2,10 +2,16 @@ import { useState } from 'react'
 import Home from './pages/Home'
 import Experience from './pages/Experience'
 import Result from './pages/Result'
+import experienceTemplates from './data/experienceTemplates.json'
 
 import { applyOptionScore, createInitialScores } from './utils/score.js'
 
 const initialScores = createInitialScores()
+
+function getStepCount(majorId) {
+  const steps = experienceTemplates[majorId]
+  return Array.isArray(steps) ? steps.length : 0
+}
 
 function App() {
   const [page, setPage] = useState('home')
@@ -31,7 +37,7 @@ function App() {
     const nextStep = currentStep + 1
     setCurrentStep(nextStep)
 
-    const totalSteps = 5
+    const totalSteps = getStepCount(selectedMajor?.id)
     if (nextStep >= totalSteps) {
       setPage('result')
     }

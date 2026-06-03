@@ -41,12 +41,18 @@ CSS
 本地 JSON 数据
 ```
 
-暂时不依赖后端、数据库、真实地图 API 或机器学习模型。
+当前已开始预留 AI 能力：前端通过 `/api` 调用本地后端代理，后端可接入 DeepSeek，并在未配置 API key 时使用本地课程库兜底。
+
+```text
+web/      前端体验流程
+backend/  AI 代理服务
+```
 
 ## 当前文档
 
 - `PROJECT_PLAN.md`：项目规划与一周开发安排
 - `DEVELOPMENT_GUIDE.md`：开发规范、数据结构、评分和协作规则
+- `backend/README.md`：DeepSeek 本地接入与运行说明
 - `tools/`：辅助脚本
 
 ## 数据说明
