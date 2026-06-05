@@ -164,8 +164,44 @@ body {
 }
 
 .experience-page {
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+.experience-layout {
+  display: grid;
+  grid-template-columns: minmax(420px, 0.95fr) minmax(460px, 1.05fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.experience-choice-panel,
+.result-content-panel {
+  min-width: 0;
+}
+
+.experience-map-panel,
+.result-map-panel {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+}
+
+.experience-map-panel.map-highlight,
+.result-map-panel.map-highlight {
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+.experience-map-panel .map-svg,
+.result-map-panel .map-svg {
+  height: min(72vh, 760px);
+}
+
+.experience-map-panel .route-timeline,
+.result-map-panel .route-timeline {
+  max-height: 180px;
+  overflow-y: auto;
 }
 
 .experience-header {
@@ -435,8 +471,15 @@ body {
 }
 
 .result-page {
-  max-width: 900px;
+  max-width: 1500px;
   margin: 0 auto;
+}
+
+.result-layout {
+  display: grid;
+  grid-template-columns: minmax(500px, 0.95fr) minmax(520px, 1.05fr);
+  gap: 24px;
+  align-items: start;
 }
 
 .result-header {
@@ -681,6 +724,47 @@ body {
   border-radius: 12px;
 }
 
+.current-location-strip {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100% - 28px);
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #7f1d1d;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.16);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  font-size: 0.9rem;
+  backdrop-filter: blur(8px);
+}
+
+.current-location-dot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.16);
+}
+
+.current-location-label {
+  color: #991b1b;
+  font-weight: 700;
+}
+
+.current-location-strip strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1e293b;
+}
+
 .map-svg {
   width: 100%;
   height: 620px;
@@ -702,6 +786,11 @@ body {
   stroke-width: 15;
 }
 
+.map-road-bridge {
+  stroke: #fff7ed;
+  stroke-width: 18;
+}
+
 .map-building-layer {
   opacity: 0.55;
 }
@@ -716,16 +805,26 @@ body {
 }
 
 .map-background-image + .map-road-layer .map-road {
-  stroke: rgba(255, 255, 255, 0.78);
-  mix-blend-mode: screen;
+  stroke: rgba(220, 38, 38, 0.5);
+  mix-blend-mode: normal;
 }
 
 .map-background-image + .map-road-layer .map-road-main {
-  stroke-width: 16;
+  stroke-width: 5;
 }
 
 .map-background-image + .map-road-layer .map-road-branch {
-  stroke-width: 11;
+  stroke-width: 4;
+}
+
+.map-background-image + .map-road-layer .map-road-bridge {
+  stroke: rgba(220, 38, 38, 0.65);
+  stroke-width: 6;
+}
+
+.map-background-image + .map-road-layer .map-road-access {
+  stroke: rgba(37, 99, 235, 0.45);
+  stroke-width: 3;
 }
 
 .map-location {
@@ -734,6 +833,26 @@ body {
 
 .map-location.is-visited {
   filter: drop-shadow(0 12px 18px rgba(249, 115, 22, 0.22));
+}
+
+.map-location.is-current {
+  filter: drop-shadow(0 18px 22px rgba(239, 68, 68, 0.32));
+}
+
+.current-location-pulse {
+  fill: rgba(239, 68, 68, 0.18);
+  stroke: rgba(239, 68, 68, 0.45);
+  stroke-width: 4;
+}
+
+.current-location-badge rect {
+  fill: #ef4444;
+  stroke: #fff7ed;
+  stroke-width: 4;
+}
+
+.current-location-badge text {
+  fill: white;
 }
 
 .timeline-mode {
@@ -792,6 +911,21 @@ body {
   padding: 8px 12px;
   border-radius: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item.is-current {
+  border: 2px solid #ef4444;
+  color: #7f1d1d;
+  box-shadow: 0 8px 18px rgba(239, 68, 68, 0.16);
+}
+
+.timeline-current-tag {
+  border-radius: 999px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 7px;
 }
 
 .timeline-number {
@@ -1206,12 +1340,33 @@ body {
   .scores-grid .score-item:last-child {
     grid-column: span 2;
   }
+
+  .experience-page,
+  .result-page {
+    max-width: 100%;
+  }
+
+  .experience-layout,
+  .result-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .experience-map-panel,
+  .result-map-panel {
+    position: static;
+  }
   
   .two-columns {
     grid-template-columns: 1fr;
   }
   
   .map-svg {
+    height: 460px;
+  }
+
+  .experience-map-panel .map-svg,
+  .result-map-panel .map-svg {
     height: 460px;
   }
   

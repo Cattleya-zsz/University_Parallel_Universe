@@ -3,15 +3,15 @@
     "id": "dorm",
     "name": "宿舍",
     "icon": "🏠",
-    "x": 46,
-    "y": 80,
+    "x": 15,
+    "y": 20,
     "type": "life"
   },
   {
     "id": "teachingBuilding",
     "name": "教学楼",
     "icon": "🏫",
-    "x": 64,
+    "x": 66,
     "y": 7,
     "type": "study"
   },
@@ -19,8 +19,8 @@
     "id": "labBuilding",
     "name": "实验楼",
     "icon": "🔬",
-    "x": 67,
-    "y": 16,
+    "x": 61,
+    "y": 18,
     "type": "practice"
   },
   {
@@ -28,71 +28,71 @@
     "name": "图书馆",
     "icon": "📚",
     "x": 59,
-    "y": 31,
+    "y": 33,
     "type": "study"
   },
   {
     "id": "studyRoom",
     "name": "自习室",
     "icon": "✏️",
-    "x": 45,
-    "y": 69,
+    "x": 29,
+    "y": 57,
     "type": "study"
   },
   {
     "id": "cafeteria",
     "name": "食堂",
     "icon": "🍽️",
-    "x": 42,
-    "y": 84,
+    "x": 15,
+    "y": 7,
     "type": "life"
   },
   {
     "id": "sportsField",
     "name": "操场",
     "icon": "🏃",
-    "x": 29,
-    "y": 90,
+    "x": 35,
+    "y": 31,
     "type": "sport"
   },
   {
     "id": "gym",
     "name": "体育馆",
     "icon": "🏸",
-    "x": 30,
-    "y": 39,
+    "x": 95,
+    "y": 48,
     "type": "sport"
   },
   {
     "id": "clubCenter",
     "name": "社团活动中心",
     "icon": "🎤",
-    "x": 52,
-    "y": 17,
+    "x": 51,
+    "y": 15,
     "type": "social"
   },
   {
     "id": "hospital",
     "name": "教学医院",
     "icon": "🏥",
-    "x": 74,
-    "y": 29,
+    "x": 61,
+    "y": 22,
     "type": "medical"
   },
   {
     "id": "clinic",
     "name": "门诊",
     "icon": "🩺",
-    "x": 79,
-    "y": 36,
+    "x": 62,
+    "y": 25,
     "type": "medical"
   },
   {
     "id": "offCampus",
     "name": "校外",
     "icon": "🚌",
-    "x": 6,
-    "y": 19,
+    "x": 4,
+    "y": 16,
     "type": "practice"
   }
 ]

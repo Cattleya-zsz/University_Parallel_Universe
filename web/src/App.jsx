@@ -64,6 +64,7 @@ function App() {
         <Experience
           selectedMajor={selectedMajor}
           currentStep={currentStep}
+          selectedOptions={selectedOptions}
           scores={scores}
           onSelectOption={handleSelectOption}
         />

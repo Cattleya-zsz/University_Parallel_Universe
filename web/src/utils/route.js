@@ -58,7 +58,7 @@ export function buildGraphFromPaths(paths) {
 
     const weight = Number.isFinite(edge.weight)
       ? edge.weight
-      : getDistance(fromNode, toNode);
+      : getDistance(fromNode, toNode) * getEdgeWeightMultiplier(edge);
 
     graph.get(edge.from).push({ nodeId: edge.to, weight, type: edge.type || "branch" });
     graph.get(edge.to).push({ nodeId: edge.from, weight, type: edge.type || "branch" });
@@ -80,36 +80,31 @@ export function findShortestNodePath(startNodeId, endNodeId, paths) {
 
   const distances = new Map();
   const previous = new Map();
-  const unvisited = new Set(graph.keys());
+  const visited = new Set();
+  const queue = new MinPriorityQueue();
 
   for (const nodeId of graph.keys()) {
-    distances.set(nodeId, nodeId === startNodeId ? 0 : Infinity);
+    distances.set(nodeId, Infinity);
   }
+  distances.set(startNodeId, 0);
+  queue.push(startNodeId, 0);
 
-  while (unvisited.size > 0) {
-    let currentNodeId = null;
-    let currentDistance = Infinity;
-
-    for (const nodeId of unvisited) {
-      const distance = distances.get(nodeId);
-      if (distance < currentDistance) {
-        currentDistance = distance;
-        currentNodeId = nodeId;
-      }
-    }
-
-    if (!currentNodeId || currentDistance === Infinity) break;
+  while (queue.size > 0) {
+    const item = queue.pop();
+    const currentNodeId = item.nodeId;
+    const currentDistance = item.priority;
+    if (visited.has(currentNodeId)) continue;
+    visited.add(currentNodeId);
     if (currentNodeId === endNodeId) break;
 
-    unvisited.delete(currentNodeId);
-
     for (const neighbor of graph.get(currentNodeId) || []) {
-      if (!unvisited.has(neighbor.nodeId)) continue;
+      if (visited.has(neighbor.nodeId)) continue;
 
       const nextDistance = currentDistance + neighbor.weight;
       if (nextDistance < distances.get(neighbor.nodeId)) {
         distances.set(neighbor.nodeId, nextDistance);
         previous.set(neighbor.nodeId, currentNodeId);
+        queue.push(neighbor.nodeId, nextDistance);
       }
     }
   }
@@ -174,4 +169,74 @@ function getDistance(fromNode, toNode) {
   const dx = Number(fromNode.x) - Number(toNode.x);
   const dy = Number(fromNode.y) - Number(toNode.y);
   return Math.sqrt(dx * dx + dy * dy);
+}
+
+function getEdgeWeightMultiplier(edge) {
+  if (edge.type === "redline") return 1;
+  if (edge.type === "bridge") return 0.85;
+  if (edge.type === "access") return 1.35;
+  if (edge.type === "branch") return 1.12;
+  return 1;
+}
+
+class MinPriorityQueue {
+  constructor() {
+    this.items = [];
+  }
+
+  get size() {
+    return this.items.length;
+  }
+
+  push(nodeId, priority) {
+    this.items.push({ nodeId, priority });
+    this.bubbleUp(this.items.length - 1);
+  }
+
+  pop() {
+    const first = this.items[0];
+    const last = this.items.pop();
+
+    if (this.items.length > 0) {
+      this.items[0] = last;
+      this.sinkDown(0);
+    }
+
+    return first;
+  }
+
+  bubbleUp(index) {
+    while (index > 0) {
+      const parentIndex = Math.floor((index - 1) / 2);
+      if (this.items[parentIndex].priority <= this.items[index].priority) break;
+      [this.items[parentIndex], this.items[index]] = [this.items[index], this.items[parentIndex]];
+      index = parentIndex;
+    }
+  }
+
+  sinkDown(index) {
+    while (true) {
+      const leftIndex = index * 2 + 1;
+      const rightIndex = index * 2 + 2;
+      let smallestIndex = index;
+
+      if (
+        leftIndex < this.items.length &&
+        this.items[leftIndex].priority < this.items[smallestIndex].priority
+      ) {
+        smallestIndex = leftIndex;
+      }
+
+      if (
+        rightIndex < this.items.length &&
+        this.items[rightIndex].priority < this.items[smallestIndex].priority
+      ) {
+        smallestIndex = rightIndex;
+      }
+
+      if (smallestIndex === index) break;
+      [this.items[smallestIndex], this.items[index]] = [this.items[index], this.items[smallestIndex]];
+      index = smallestIndex;
+    }
+  }
 }
