@@ -18,11 +18,6 @@ function Experience({ selectedMajor, currentStep, selectedOptions = [], scores, 
   return (
     <div className="experience-page">
       <div className="experience-layout">
-        <aside className="experience-map-panel map-section map-highlight">
-          <h3 className="section-title map-title">🗺️ 当前校园路线</h3>
-          <CampusMap locations={locations} route={previewRouteIds} currentLocationId={currentLocationId} />
-        </aside>
-
         <main className="experience-choice-panel">
           <div className="progress-bar">
             <div className="progress-fill" style={{ width: `${(currentStep / totalSteps) * 100}%` }} />
@@ -49,6 +44,11 @@ function Experience({ selectedMajor, currentStep, selectedOptions = [], scores, 
             </div>
           </div>
         </main>
+
+        <aside className="experience-map-panel map-section map-highlight">
+          <h3 className="section-title map-title">当前校园路线</h3>
+          <CampusMap locations={locations} route={previewRouteIds} currentLocationId={currentLocationId} />
+        </aside>
       </div>
     </div>
   )
