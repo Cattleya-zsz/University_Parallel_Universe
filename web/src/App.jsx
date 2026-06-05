@@ -2,9 +2,11 @@ import { useState } from 'react'
 import Home from './pages/Home'
 import Experience from './pages/Experience'
 import Result from './pages/Result'
+import ResultDetails from './pages/ResultDetails'
 import experienceTemplates from './data/experienceTemplates.json'
 
 import { applyOptionScore, createInitialScores } from './utils/score.js'
+import { getMajorThemeStyle } from './utils/majorTheme.js'
 
 const initialScores = createInitialScores()
 
@@ -55,8 +57,18 @@ function App() {
     handleRestart()
   }
 
+  const handleOpenDetails = () => {
+    setPage('resultDetails')
+  }
+
+  const handleBackToResult = () => {
+    setPage('result')
+  }
+
+  const themeStyle = getMajorThemeStyle(selectedMajor?.id)
+
   return (
-    <div className="app">
+    <div className={`app ${selectedMajor ? `theme-${selectedMajor.id}` : 'theme-home'}`} style={themeStyle}>
       {page === 'home' && (
         <Home onSelectMajor={handleSelectMajor} />
       )}
@@ -76,6 +88,16 @@ function App() {
           scores={scores}
           onRestart={handleRestart}
           onGoHome={handleGoHome}
+          onOpenDetails={handleOpenDetails}
+        />
+      )}
+      {page === 'resultDetails' && (
+        <ResultDetails
+          selectedMajor={selectedMajor}
+          selectedOptions={selectedOptions}
+          scores={scores}
+          onBack={handleBackToResult}
+          onRestart={handleRestart}
         />
       )}
     </div>

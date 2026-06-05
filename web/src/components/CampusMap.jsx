@@ -95,7 +95,13 @@ function CampusMap({ locations = [], route = [], currentLocationId = '' }) {
         </div>
       )}
 
-      <svg viewBox={`0 0 ${mapWidth} ${mapHeight}`} className="map-svg" role="img" aria-label="校园路线地图">
+      <svg
+        viewBox={`0 0 ${mapWidth} ${mapHeight}`}
+        preserveAspectRatio="xMidYMid meet"
+        className="map-svg"
+        role="img"
+        aria-label="校园路线地图"
+      >
         <defs>
           <linearGradient id="campusGrass" x1="0%" x2="100%" y1="0%" y2="100%">
             <stop offset="0%" stopColor="#f7fee7" />
