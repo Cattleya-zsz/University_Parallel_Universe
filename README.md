@@ -80,3 +80,47 @@ backend/  AI 代理服务
 ```
 
 开发时先保证核心 Demo 能跑通，再考虑扩展专业数量、地图美化、动画效果或后端能力。
+
+## 地图路线模块
+
+地图模块采用人工标注的抽象校园图，不接入真实地图 API。当前底图结构参考纵向校园插画：中央河道贯穿南北，多处桥梁连接左右校园道路，建筑以编号块标注，地点以相对百分比坐标落点。
+
+正式展示时可将艺术美化后的地图图片保存为：
+
+```text
+web/public/campus-map.png
+```
+
+图片建议保持约 `1000 x 1500` 的纵向比例。`paths.json` 中的 `meta.backgroundImage` 默认指向 `/campus-map.png`；如果该文件不存在，组件会使用内置 SVG 兜底底图。
+
+路线生成流程：
+
+```text
+用户事件选择
+→ 提取 locationId 序列
+→ locationAnchors 映射到道路节点
+→ Dijkstra 计算节点间最短路径
+→ SVG 高亮道路网络路线
+```
+
+核心文件：
+
+| 文件 | 说明 |
+|------|------|
+| `web/src/data/locations.json` | 地点池，包含 `id/name/icon/x/y/type` |
+| `web/src/data/paths.json` | 道路网络，包含 `meta/nodes/edges/locationAnchors/defaultRoutes` |
+| `web/src/utils/route.js` | 事件地点序列、路线规范化、道路网络寻路工具 |
+| `web/src/components/CampusMap.jsx` | 校园底图、道路网络、地点点位、路线高亮和顺序编号 |
+
+地点类型目前统一为：
+
+```text
+life
+study
+practice
+sport
+social
+medical
+```
+
+`CampusMap` 的 `route` 支持地点 id 数组或地点对象数组。正常情况下路线会沿 `paths.json` 的道路网络绘制；如果数据缺失导致无法寻路，组件会回退为地点直连，保证结果页不崩溃。

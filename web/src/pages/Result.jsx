@@ -95,7 +95,7 @@ function Result({ selectedMajor, selectedOptions, scores, onRestart, onGoHome })
 
       <div className="map-section map-highlight">
         <h3 className="section-title map-title">🗺️ 你的校园路线</h3>
-        <CampusMap locations={locations} route={routeLocations} />
+        <CampusMap locations={locations} route={routeIds} />
       </div>
 
       <div className="route-section route-compact">

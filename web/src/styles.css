@@ -683,7 +683,66 @@ body {
 
 .map-svg {
   width: 100%;
-  height: 380px;
+  height: 620px;
+  display: block;
+}
+
+.map-road {
+  stroke: #f8fafc;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.92;
+}
+
+.map-road-main {
+  stroke-width: 22;
+}
+
+.map-road-branch {
+  stroke-width: 15;
+}
+
+.map-building-layer {
+  opacity: 0.55;
+}
+
+.map-background-image {
+  pointer-events: none;
+}
+
+.map-background-image:not([href]),
+.map-background-image[href=""] {
+  display: none;
+}
+
+.map-background-image + .map-road-layer .map-road {
+  stroke: rgba(255, 255, 255, 0.78);
+  mix-blend-mode: screen;
+}
+
+.map-background-image + .map-road-layer .map-road-main {
+  stroke-width: 16;
+}
+
+.map-background-image + .map-road-layer .map-road-branch {
+  stroke-width: 11;
+}
+
+.map-location {
+  transition: transform 0.2s ease;
+}
+
+.map-location.is-visited {
+  filter: drop-shadow(0 12px 18px rgba(249, 115, 22, 0.22));
+}
+
+.timeline-mode {
+  background: rgba(15, 23, 42, 0.08);
+  border-radius: 999px;
+  color: #78350f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
 }
 
 .route-timeline {
@@ -1153,7 +1212,7 @@ body {
   }
   
   .map-svg {
-    height: 320px;
+    height: 460px;
   }
   
   .map-section.map-highlight {

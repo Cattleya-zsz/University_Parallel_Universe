@@ -12,6 +12,7 @@ const files = {
   majors: resolve(dataRoot, "majors.json"),
   experienceTemplates: resolve(dataRoot, "experienceTemplates.json"),
   locations: resolve(dataRoot, "locations.json"),
+  paths: resolve(dataRoot, "paths.json"),
   coreCourses: resolve(dataRoot, "coreCourses.json"),
   courseKnowledgeBase: resolve(dataRoot, "courseKnowledgeBase.json")
 };
@@ -23,18 +24,21 @@ const [
   majors,
   experienceTemplates,
   locations,
+  paths,
   coreCourses,
   courseKnowledgeBase
 ] = await Promise.all([
   readJson(files.majors),
   readJson(files.experienceTemplates),
   readJson(files.locations),
+  readJson(files.paths),
   readJson(files.coreCourses),
   readJson(files.courseKnowledgeBase)
 ]);
 
 validateMajors(majors);
 validateLocations(locations);
+validatePaths(paths, locations);
 validateExperienceTemplates(experienceTemplates, majors, locations);
 validateCoreCourses(coreCourses, majors);
 validateCourseKnowledgeBase(courseKnowledgeBase, majors);
@@ -56,6 +60,8 @@ if (errors.length > 0) {
 console.log("Data validation passed.");
 console.log(`Majors: ${majors.length}`);
 console.log(`Locations: ${locations.length}`);
+console.log(`Path nodes: ${paths.nodes.length}`);
+console.log(`Path edges: ${paths.edges.length}`);
 console.log(`Experience steps: ${Object.values(experienceTemplates).reduce((sum, steps) => sum + steps.length, 0)}`);
 console.log(`Experience options: ${Object.values(experienceTemplates).reduce((sum, steps) => {
   return sum + steps.reduce((stepSum, step) => stepSum + step.options.length, 0);
@@ -181,6 +187,108 @@ function validateExperienceTemplates(value, majorsValue, locationsValue) {
         }
 
         validateScore(option?.score, `${optionPath}.score`);
+      });
+    });
+  }
+}
+
+function validatePaths(value, locationsValue) {
+  if (!isPlainObject(value)) {
+    errors.push("paths.json must be an object.");
+    return;
+  }
+
+  if (!isPlainObject(value.meta)) {
+    errors.push("paths.meta must be an object.");
+  } else {
+    requireNumber(value.meta.mapWidth, "paths.meta.mapWidth");
+    requireNumber(value.meta.mapHeight, "paths.meta.mapHeight");
+  }
+
+  if (!Array.isArray(value.nodes) || value.nodes.length === 0) {
+    errors.push("paths.nodes must be a non-empty array.");
+    return;
+  }
+
+  if (!Array.isArray(value.edges) || value.edges.length === 0) {
+    errors.push("paths.edges must be a non-empty array.");
+    return;
+  }
+
+  if (!Array.isArray(value.locationAnchors)) {
+    errors.push("paths.locationAnchors must be an array.");
+    return;
+  }
+
+  const nodeIds = new Set();
+  value.nodes.forEach((node, index) => {
+    const path = `paths.nodes[${index}]`;
+    requireString(node?.id, `${path}.id`);
+    requireNumber(node?.x, `${path}.x`);
+    requireNumber(node?.y, `${path}.y`);
+
+    if (node?.id) checkUnique(nodeIds, node.id, `${path}.id`);
+    if (Number(node?.x) < 0 || Number(node?.x) > 100) {
+      errors.push(`${path}.x must be between 0 and 100.`);
+    }
+    if (Number(node?.y) < 0 || Number(node?.y) > 100) {
+      errors.push(`${path}.y must be between 0 and 100.`);
+    }
+  });
+
+  value.edges.forEach((edge, index) => {
+    const path = `paths.edges[${index}]`;
+    requireString(edge?.from, `${path}.from`);
+    requireString(edge?.to, `${path}.to`);
+
+    if (edge?.from && !nodeIds.has(edge.from)) {
+      errors.push(`${path}.from "${edge.from}" does not exist in paths.nodes.`);
+    }
+    if (edge?.to && !nodeIds.has(edge.to)) {
+      errors.push(`${path}.to "${edge.to}" does not exist in paths.nodes.`);
+    }
+  });
+
+  const locationIds = new Set((locationsValue || []).map((location) => location.id));
+  const anchoredLocationIds = new Set();
+
+  value.locationAnchors.forEach((anchor, index) => {
+    const path = `paths.locationAnchors[${index}]`;
+    requireString(anchor?.locationId, `${path}.locationId`);
+    requireString(anchor?.nodeId, `${path}.nodeId`);
+
+    if (anchor?.locationId) {
+      checkUnique(anchoredLocationIds, anchor.locationId, `${path}.locationId`);
+      if (!locationIds.has(anchor.locationId)) {
+        errors.push(`${path}.locationId "${anchor.locationId}" does not exist in locations.json.`);
+      }
+    }
+    if (anchor?.nodeId && !nodeIds.has(anchor.nodeId)) {
+      errors.push(`${path}.nodeId "${anchor.nodeId}" does not exist in paths.nodes.`);
+    }
+  });
+
+  for (const locationId of locationIds) {
+    if (!anchoredLocationIds.has(locationId)) {
+      errors.push(`paths.locationAnchors is missing locationId "${locationId}".`);
+    }
+  }
+
+  if (Array.isArray(value.defaultRoutes)) {
+    value.defaultRoutes.forEach((route, routeIndex) => {
+      const path = `paths.defaultRoutes[${routeIndex}]`;
+      requireString(route?.id, `${path}.id`);
+      requireString(route?.name, `${path}.name`);
+
+      if (!Array.isArray(route?.locationIds) || route.locationIds.length < 2) {
+        errors.push(`${path}.locationIds must contain at least 2 location ids.`);
+        return;
+      }
+
+      route.locationIds.forEach((locationId, locationIndex) => {
+        if (!locationIds.has(locationId)) {
+          errors.push(`${path}.locationIds[${locationIndex}] "${locationId}" does not exist in locations.json.`);
+        }
       });
     });
   }
