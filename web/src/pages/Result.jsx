@@ -22,7 +22,7 @@ function Result({ selectedMajor, selectedOptions, scores, onRestart, onGoHome, o
 
       <div className="result-layout">
         <aside className="result-map-panel map-section map-highlight">
-          <h3 className="section-title map-title">🗺️ 你的校园路线</h3>
+          <h3 className="section-title map-title">你的校园路线</h3>
           <CampusMap locations={locations} route={routeIds} currentLocationId={currentLocationId} />
         </aside>
 
@@ -47,20 +47,22 @@ function Result({ selectedMajor, selectedOptions, scores, onRestart, onGoHome, o
               </div>
             </div>
           </div>
-
-          <div className="detail-entry-card">
-            <div>
-              <h3>专业体验卡与课程问答</h3>
-              <p>查看更完整的专业体验分析、AI 总结和课程相关问答。</p>
-            </div>
-            <button className="action-btn primary" onClick={onOpenDetails}>查看详情</button>
-          </div>
-
-          <div className="action-buttons">
-            <button className="action-btn secondary" onClick={onGoHome}>返回首页</button>
-            <button className="action-btn primary" onClick={onRestart}>再次体验</button>
-          </div>
         </main>
+      </div>
+
+      <div className="result-actions-row">
+        <div className="detail-entry-card">
+          <div>
+            <h3>专业体验卡与课程问答</h3>
+            <p>查看更完整的专业体验分析、AI 总结和课程相关问答。</p>
+          </div>
+          <button className="action-btn primary" onClick={onOpenDetails}>查看详情</button>
+        </div>
+
+        <div className="action-buttons">
+          <button className="action-btn secondary" onClick={onGoHome}>返回首页</button>
+          <button className="action-btn primary" onClick={onRestart}>再次体验</button>
+        </div>
       </div>
     </div>
   )
