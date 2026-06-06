@@ -1,6 +1,6 @@
 {
   "name": "university-parallel-universe",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "大学平行时空 - 面向高中生的专业一日模拟项目",
   "type": "module",
   "scripts": {

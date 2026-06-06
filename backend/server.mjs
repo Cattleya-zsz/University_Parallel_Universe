@@ -13,6 +13,7 @@ const ALLOWED_ORIGIN = process.env.AI_PROXY_ORIGIN || "http://127.0.0.1:5173";
 const DEEPSEEK_BASE_URL = (process.env.DEEPSEEK_BASE_URL || "https://api.deepseek.com").replace(/\/$/, "");
 const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL || "deepseek-v4-flash";
 const DEEPSEEK_THINKING = process.env.DEEPSEEK_THINKING || "disabled";
+const SCORE_KEYS = ["health", "study", "social", "practice", "pressure"];
 
 const courseKnowledgeBase = await readJson(resolve(projectRoot, "web/src/data/courseKnowledgeBase.json"));
 
@@ -67,6 +68,8 @@ server.listen(PORT, "127.0.0.1", () => {
 async function handleCourseChat(body) {
   const question = normalizeText(body?.question).slice(0, 500);
   const majorId = normalizeText(body?.majorId) || "computer";
+  const majorName = normalizeText(body?.majorName);
+  const dayContext = normalizeDayContext(body?.dayContext);
   const majorCourses = courseKnowledgeBase.filter((course) => course.majorId === majorId);
   const relatedCourses = selectRelatedCourses(majorCourses, question, 5);
 
@@ -78,7 +81,7 @@ async function handleCourseChat(body) {
     };
   }
 
-  const localFallback = buildLocalCourseAnswer(question, relatedCourses, majorCourses);
+  const localFallback = buildLocalCourseAnswer(question, relatedCourses, majorCourses, dayContext);
 
   if (!process.env.DEEPSEEK_API_KEY) {
     return {
@@ -91,6 +94,11 @@ async function handleCourseChat(body) {
 
   try {
     const answer = await callDeepSeek([
+      {
+        role: "system",
+        content:
+          "Use dayContext.profile, dayContext.scores and dayContext.selectedEvents as personalization context for the course consultation. Treat them as references, not as a final psychological or career assessment."
+      },
       {
         role: "system",
         content: [
@@ -110,6 +118,8 @@ async function handleCourseChat(body) {
           {
             question,
             majorId,
+            majorName,
+            dayContext,
             courseContext: relatedCourses.map(toCourseContext)
           },
           null,
@@ -215,7 +225,7 @@ async function callDeepSeek(messages) {
   return data?.choices?.[0]?.message?.content?.trim() || "AI 暂时没有生成内容。";
 }
 
-function buildLocalCourseAnswer(question, relatedCourses, majorCourses) {
+function buildLocalCourseAnswer(question, relatedCourses, majorCourses, dayContext = {}) {
   const courses = relatedCourses.length > 0 ? relatedCourses : majorCourses.slice(0, 3);
   if (courses.length === 0) {
     return "本地课程库里暂时没有找到这个专业的课程信息。可以先换一个专业或问一个更宽泛的问题。";
@@ -306,6 +316,44 @@ function toCourseContext(course) {
     applicationAreas: course.applicationAreas,
     highSchoolFriendlyIntro: course.highSchoolFriendlyIntro,
     aiConsultationHints: course.aiConsultationHints
+  };
+}
+
+function normalizeDayContext(value = {}) {
+  const profile = value?.profile && typeof value.profile === "object"
+    ? {
+        id: normalizeText(value.profile.id),
+        title: normalizeText(value.profile.title),
+        dominantKey: normalizeText(value.profile.dominantKey),
+        description: normalizeText(value.profile.description).slice(0, 240),
+        advice: normalizeText(value.profile.advice).slice(0, 240)
+      }
+    : null;
+
+  const scores = SCORE_KEYS.reduce((result, key) => {
+    const score = Number(value?.scores?.[key]);
+    result[key] = Number.isFinite(score) ? score : 0;
+    return result;
+  }, {});
+
+  const selectedEvents = Array.isArray(value?.selectedEvents)
+    ? value.selectedEvents.slice(0, 8).map((option) => ({
+        id: normalizeText(option?.id),
+        label: normalizeText(option?.label).slice(0, 160),
+        event: normalizeText(option?.event).slice(0, 120),
+        locationId: normalizeText(option?.locationId),
+        score: SCORE_KEYS.reduce((result, key) => {
+          const score = Number(option?.score?.[key]);
+          result[key] = Number.isFinite(score) ? score : 0;
+          return result;
+        }, {})
+      }))
+    : [];
+
+  return {
+    profile,
+    scores,
+    selectedEvents
   };
 }
 

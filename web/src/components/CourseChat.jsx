@@ -7,7 +7,7 @@ const SUGGESTED_QUESTIONS = [
   '这类专业学习起来难在哪里？'
 ]
 
-function CourseChat({ selectedMajor }) {
+function CourseChat({ selectedMajor, selectedOptions = [], scores = {}, profile = null }) {
   const [question, setQuestion] = useState('')
   const [answer, setAnswer] = useState('')
   const [notice, setNotice] = useState('')
@@ -41,7 +41,27 @@ function CourseChat({ selectedMajor }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           majorId: selectedMajor?.id,
-          question: trimmedQuestion
+          majorName: selectedMajor?.name,
+          question: trimmedQuestion,
+          dayContext: {
+            profile: profile
+              ? {
+                  id: profile.id,
+                  title: profile.title,
+                  dominantKey: profile.dominantKey,
+                  description: profile.description,
+                  advice: profile.advice
+                }
+              : null,
+            scores,
+            selectedEvents: selectedOptions.map((option) => ({
+              id: option.id,
+              label: option.label,
+              event: option.event,
+              locationId: option.locationId,
+              score: option.score
+            }))
+          }
         })
       })
 

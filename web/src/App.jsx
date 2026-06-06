@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Experience from './pages/Experience'
 import Result from './pages/Result'
 import ResultDetails from './pages/ResultDetails'
+import BackgroundMusic from './components/BackgroundMusic'
 import experienceTemplates from './data/experienceTemplates.json'
 
 import { applyOptionScore, createInitialScores } from './utils/score.js'
@@ -69,6 +70,7 @@ function App() {
 
   return (
     <div className={`app ${selectedMajor ? `theme-${selectedMajor.id}` : 'theme-home'}`} style={themeStyle}>
+      <BackgroundMusic />
       {page === 'home' && (
         <Home onSelectMajor={handleSelectMajor} />
       )}

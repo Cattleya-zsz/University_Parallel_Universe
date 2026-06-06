@@ -71,9 +71,17 @@ function ResultDetails({ selectedMajor, selectedOptions, scores, onBack, onResta
     <div className="result-detail-page">
       <div className="result-detail-header">
         <button className="detail-back-btn" onClick={onBack}>返回总览</button>
-        <div className="major-badge">
-          <span className="badge-icon">{selectedMajor?.icon}</span>
-          <span className="badge-text">{selectedMajor?.name}</span>
+        <div className="detail-major-panel">
+          <div className="detail-major-icon">{selectedMajor?.icon}</div>
+          <div className="detail-major-copy">
+            <span>专业体验档案</span>
+            <h1>{selectedMajor?.name || '专业体验'}</h1>
+            <p>查看这一天的五维反馈、特色课程，向AI提问，进一步了解这个专业！</p>
+          </div>
+        </div>
+        <div className="detail-header-status" aria-label="体验状态">
+          <span>DAY 01</span>
+          <span>REPORT</span>
         </div>
       </div>
 
@@ -120,7 +128,12 @@ function ResultDetails({ selectedMajor, selectedOptions, scores, onBack, onResta
 
         <section className="course-chat-section detail-chat-section">
           <h2 className="section-title">课程问答</h2>
-          <CourseChat selectedMajor={selectedMajor} />
+          <CourseChat
+            selectedMajor={selectedMajor}
+            selectedOptions={selectedOptions}
+            scores={scores}
+            profile={evaluation.profile}
+          />
         </section>
       </main>
 

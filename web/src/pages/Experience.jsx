@@ -17,6 +17,20 @@ function Experience({ selectedMajor, currentStep, selectedOptions = [], scores, 
 
   return (
     <div className="experience-page">
+      <header className="experience-topbar">
+        <div className="experience-major-lockup">
+          <span className="experience-major-icon">{selectedMajor?.icon}</span>
+          <div>
+            <span className="experience-kicker">今日专业体验</span>
+            <h1>{selectedMajor?.name || '专业体验'}</h1>
+          </div>
+        </div>
+        <div className="experience-step-pill">
+          <span>{currentStep + 1}</span>
+          <strong>{totalSteps}</strong>
+        </div>
+      </header>
+
       <div className="experience-layout">
         <main className="experience-choice-panel">
           <div className="progress-bar">
