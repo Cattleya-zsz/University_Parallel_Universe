@@ -1,118 +1,149 @@
-# University Parallel Universe
+# 大学平行时空 University Parallel Universe
 
-大学平行时空是一个面向高中生的 Web 专业一日模拟项目。
+面向高中生的 Web 专业一日模拟体验项目。用户先选择一个想体验的专业方向，再通过一天中的多个时间段做生活与学习选择，系统根据选择生成五维评分、校园路线、专业画像和课程问答内容，帮助用户更直观地理解不同大学专业的学习节奏与生活场景。
 
-项目希望通过“选择专业 → 模拟一天 → 做出选择 → 生成路线和画像”的方式，让高中生更直观地理解不同专业在大学中的学习节奏、活动场景和生活方式差异。
+当前版本已经完成可演示闭环，并在原 MVP 基础上加入了美术地图、结果画像、路线寻路、课程知识库和本地 AI 代理能力。
 
-## 项目目标
+## 当前完成度
 
-本项目当前阶段以一周内可展示的 MVP 为目标，优先完成一个稳定、清晰、可演示的前端交互闭环。
+- 专业体验流程：已完成专业选择、一日模拟、选项记录、五维评分和结果页展示。
+- 专业范围：已覆盖计算机类、医学类、经管类。
+- 体验数据：共 15 个时间段步骤、60 个选项、12 个校园地点。
+- 地图模块：已接入美术版校园地图、道路网络、地点锚点、Dijkstra 路线生成和路线高亮。
+- 结果画像：已接入 3 个专业 × 5 类画像类型的结果图资源。
+- 课程问答：已接入本地课程知识库，并预留 DeepSeek API 代理。
+- 数据校验：`npm run validate:data` 可校验专业、地点、路径、体验模板和课程知识库。
 
-核心流程：
+## 核心流程
 
 ```text
 选择专业
-→ 进入一日日程模拟
-→ 在多个时间段做选择
-→ 每个选择影响多维度分数
-→ 每个事件绑定校园地点
-→ 生成校园路线
-→ 输出最终专业体验画像
+-> 进入一日模拟
+-> 在多个时间段做选择
+-> 选择影响健康、学习、社交、实践、压力五个维度
+-> 选择绑定校园地点
+-> 生成校园路线
+-> 输出专业体验画像、五维评分、今日选择和课程问答
 ```
 
-## 核心功能
-
-- 专业选择：用户选择想体验的专业方向
-- 一日模拟：将一天拆分为有限个时间段
-- 分支选择：每个时间段提供若干事件选项
-- 多维评分：根据选择更新学习、健康、社交、实践、压力等维度
-- 路线可视化：根据事件地点生成校园路径
-- 结果画像：总结用户一天的选择和体验类型
-
-## 技术方向
-
-MVP 阶段采用纯前端方案：
+## 技术栈
 
 ```text
-React
+React 18
 Vite
 JavaScript
 CSS
 本地 JSON 数据
+Node.js 本地 AI 代理
 ```
 
-当前已开始预留 AI 能力：前端通过 `/api` 调用本地后端代理，后端可接入 DeepSeek，并在未配置 API key 时使用本地课程库兜底。
+项目结构：
 
 ```text
-web/      前端体验流程
-backend/  AI 代理服务
+web/       前端体验流程、地图、画像和本地数据
+backend/   DeepSeek / AI 代理服务
+tools/     数据整理与校验脚本
+docs/      分工说明和模块文档
 ```
 
-## 当前文档
+## 快速运行
 
-- `PROJECT_PLAN.md`：项目规划与一周开发安排
-- `DEVELOPMENT_GUIDE.md`：开发规范、数据结构、评分和协作规则
-- `backend/README.md`：DeepSeek 本地接入与运行说明
-- `tools/`：辅助脚本
+安装前端依赖：
 
-## 数据说明
+```powershell
+cd D:\Uni_Parallel\web
+npm install
+```
 
-前期数据计划通过人工整理公开社交媒体和短视频平台中的大学生日常 vlog 获得。
+启动前端：
 
-数据只记录与日程相关的标准化信息，例如：
+```powershell
+cd D:\Uni_Parallel\web
+npm run dev
+```
 
-- 专业分类
-- 活动时间段
-- 活动类型
-- 活动描述
-- 地点类型
+启动 AI 代理：
 
-不记录博主昵称、头像、真实姓名、具体学校、宿舍楼号、视频链接、评论区个人信息或可识别截图。
+```powershell
+cd D:\Uni_Parallel\web
+npm run dev:ai
+```
 
-本地 Excel 数据统计表默认不纳入 Git 管理。
-
-## 开发原则
-
-优先级如下：
+前端默认由 Vite 启动，`/api/*` 请求会代理到：
 
 ```text
-完整流程 > 数据结构清晰 > 展示稳定 > 页面美观 > 扩展功能
+http://127.0.0.1:8787
 ```
 
-开发时先保证核心 Demo 能跑通，再考虑扩展专业数量、地图美化、动画效果或后端能力。
+## AI 配置
 
-## 地图路线模块
+后端实际读取的是：
 
-地图模块采用人工标注的抽象校园图，不接入真实地图 API。当前底图结构参考纵向校园插画：中央河道贯穿南北，多处桥梁连接左右校园道路，建筑以编号块标注，地点以相对百分比坐标落点。
+```text
+backend/.env
+```
 
-正式展示时可将艺术美化后的地图图片保存为：
+首次配置时可以复制示例文件：
+
+```powershell
+Copy-Item backend\.env.example backend\.env
+```
+
+然后在 `backend/.env` 中填写：
+
+```text
+DEEPSEEK_API_KEY=your_deepseek_api_key_here
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+DEEPSEEK_MODEL=deepseek-chat
+DEEPSEEK_THINKING=disabled
+AI_PROXY_PORT=8787
+AI_PROXY_ORIGIN=http://127.0.0.1:5173
+```
+
+注意：`.env` 已被 `.gitignore` 忽略，不应提交真实 API key。若未配置 key，系统会使用本地课程知识库和本地评价模板兜底，保证演示不中断。
+
+可用接口：
+
+```text
+GET  /api/health
+POST /api/course-chat
+POST /api/day-evaluation
+```
+
+## 数据与资源
+
+主要数据文件：
+
+| 文件 | 说明 |
+| --- | --- |
+| `web/src/data/majors.json` | 专业列表 |
+| `web/src/data/experienceTemplates.json` | 一日模拟问题和选项 |
+| `web/src/data/locations.json` | 校园地点、坐标和类型 |
+| `web/src/data/paths.json` | 道路网络、地点锚点和默认路线 |
+| `web/public/data/paths.json` | 前端运行时读取的道路网络副本 |
+| `web/src/data/coreCourses.json` | 核心课程数据 |
+| `web/src/data/courseKnowledgeBase.json` | 课程问答知识库 |
+| `web/src/data/resultArtAssets.js` | 结果画像资源映射 |
+
+主要美术资源：
 
 ```text
 web/public/campus-map.png
+web/public/campus-map-redline.png
+web/public/art/result/{majorId}/{typeKey}.png
 ```
 
-图片建议保持约 `1000 x 1500` 的纵向比例。`paths.json` 中的 `meta.backgroundImage` 默认指向 `/campus-map.png`；如果该文件不存在，组件会使用内置 SVG 兜底底图。
-
-路线生成流程：
+当前支持的画像类型：
 
 ```text
-用户事件选择
-→ 提取 locationId 序列
-→ locationAnchors 映射到道路节点
-→ Dijkstra 计算节点间最短路径
-→ SVG 高亮道路网络路线
+study
+practice
+social
+health
+pressure
 ```
 
-核心文件：
-
-| 文件 | 说明 |
-|------|------|
-| `web/src/data/locations.json` | 地点池，包含 `id/name/icon/x/y/type` |
-| `web/src/data/paths.json` | 道路网络，包含 `meta/nodes/edges/locationAnchors/defaultRoutes` |
-| `web/src/utils/route.js` | 事件地点序列、路线规范化、道路网络寻路工具 |
-| `web/src/components/CampusMap.jsx` | 校园底图、道路网络、地点点位、路线高亮和顺序编号 |
-
-地点类型目前统一为：
+当前支持的地点类型：
 
 ```text
 life
@@ -123,4 +154,40 @@ social
 medical
 ```
 
-`CampusMap` 的 `route` 支持地点 id 数组或地点对象数组。正常情况下路线会沿 `paths.json` 的道路网络绘制；如果数据缺失导致无法寻路，组件会回退为地点直连，保证结果页不崩溃。
+## 校验与构建
+
+数据校验：
+
+```powershell
+cd D:\Uni_Parallel\web
+npm run validate:data
+```
+
+生产构建：
+
+```powershell
+cd D:\Uni_Parallel\web
+npm run build
+```
+
+预览构建产物：
+
+```powershell
+cd D:\Uni_Parallel\web
+npm run preview
+```
+
+## 当前展示重点
+
+- 体验页：事件选择为主，地图作为实时路线预览辅助展示。
+- 结果页：地图作为视觉亮点，占据更大的展示区域；右侧展示专业画像、五维评分和今日选择。
+- 地图路线：根据用户选择的地点序列，通过道路网络生成路线并高亮展示。
+- 课程问答：在详情页提供围绕专业课程、难度和学习体验的问答入口。
+
+## 开发注意事项
+
+- 不接入真实地图 API，地图使用项目内美术底图和本地道路网络。
+- 本地 Excel 数据表默认不纳入 Git 管理。
+- 真实 API key 只放在 `backend/.env`，不要写入前端代码或提交到仓库。
+- 修改体验模板、地点或路径后，应运行 `npm run validate:data`。
+- 修改前端布局或组件后，应运行 `npm run build`。
