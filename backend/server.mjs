@@ -112,10 +112,10 @@ async function handleCourseChat(body) {
         content: [
           "你是“大学平行时空”的课程咨询助手。",
           "用户是高中生，正在体验不同大学专业的一天。",
-          "回答要亲和、简明、有画面感，避免堆术语。",
+          "回答要亲和、具体、有画面感，可以适度展开解释，但避免堆术语。",
           "必须主要依据提供的课程知识库，不确定时要直接说明。",
           "使用以下结构：",
-          "【简短回答】两到四句话",
+          "【课程解释】结合问题展开说明",
           "【相关课程】列出 1-3 门课程和原因",
           "【体验提示】给高中生一个可执行的小建议"
         ].join("\n")
@@ -253,7 +253,7 @@ async function handleCounterfactualAnalysis(body) {
           "你是面向高中生的专业体验反事实分析助手。",
           "你的任务不是重新推荐专业，而是解释：如果用户在同一专业体验里换一种选择，五维体验可能会怎样变化。",
           "请保持温和、具体、可执行，不做心理诊断或升学结论。",
-          "回答不超过 45 个汉字，只用一句话：说替换哪类选择，以及主要改变哪个体验维度。",
+          "回答控制在 160-200 个汉字，写成一段话：先说明建议替换的选择，再解释五维体验会怎样变化，最后提醒这只是探索提示。",
           "必须基于提供的 scores、selectedEvents 和 alternatives，不要编造不存在的课程或地点。"
         ].join("\n")
       },
@@ -322,7 +322,7 @@ function buildLocalCourseAnswer(question, relatedCourses, majorCourses, dayConte
   });
 
   return [
-    "【简短回答】",
+    "【课程解释】",
     `你问的是“${question}”。从现有课程库看，可以先从几门代表性课程理解这个方向：它们会告诉你这个专业每天到底在训练什么能力。`,
     "",
     "【相关课程】",
@@ -376,12 +376,23 @@ function getCounterfactualGoal(goalId) {
 function buildLocalCounterfactualAnalysis(payload) {
   const goal = getCounterfactualGoal(payload.goalId);
   const topAlternative = payload.alternatives[0];
+  const pressure = Number(payload.scores.pressure) || 0;
+  const study = Number(payload.scores.study) || 0;
+  const practice = Number(payload.scores.practice) || 0;
+  const focusDimension = getCounterfactualFocusDimension(payload.goalId);
 
-  const alternativeLine = topAlternative
-    ? `试试把「${topAlternative.period}」换成「${topAlternative.label}」，主要观察压力 ${formatScoreDelta(topAlternative.score.pressure)}。`
-    : "可替代选项较少，先观察五维评分变化。";
+  if (!topAlternative) {
+    return `这条「${goal.label}」平行路线暂时没有找到明显替代选项。你可以先从当前五维评分观察自己的体验：压力 ${pressure}、学习 ${study}、实践 ${practice}。它不会替你判断专业是否适合，只是帮助你看见同一专业里不同日程安排带来的感受差异。`;
+  }
 
-  return alternativeLine;
+  return `这条「${goal.label}」平行路线建议把「${topAlternative.period}」切换为「${topAlternative.label}」。相比原来的选择，它会让健康 ${formatScoreDelta(topAlternative.score.health)}、学习 ${formatScoreDelta(topAlternative.score.study)}、实践 ${formatScoreDelta(topAlternative.score.practice)}、压力 ${formatScoreDelta(topAlternative.score.pressure)}，适合重点观察${focusDimension}的变化。这个结果不是重新推荐专业，而是帮你比较同一专业中不同日程取舍：如果换一种节奏，你是否会更愿意继续探索。`;
+}
+
+function getCounterfactualFocusDimension(goalId) {
+  if (goalId === "increasePractice") return "实践投入";
+  if (goalId === "balanceDay") return "整体节奏";
+  if (goalId === "increaseSocial") return "协作体验";
+  return "压力感受";
 }
 
 function selectCounterfactualAlternatives({ majorId, selectedEvents, goalId, limit = 3 }) {
