@@ -53,8 +53,8 @@ function Result({ selectedMajor, selectedOptions, scores, onRestart, onGoHome, o
       <div className="result-actions-row">
         <div className="detail-entry-card">
           <div>
-            <h3>专业体验卡与课程问答</h3>
-            <p>查看更完整的专业体验分析、AI 总结和课程相关问答。</p>
+            <h3>AI 体验卡与平行路线分析</h3>
+            <p>查看更完整的专业体验分析、AI 总结、反事实路线推演和课程相关问答。</p>
           </div>
           <button className="action-btn primary" onClick={onOpenDetails}>查看详情</button>
         </div>

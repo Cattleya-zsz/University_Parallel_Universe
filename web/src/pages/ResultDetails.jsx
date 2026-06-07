@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import CourseChat from '../components/CourseChat'
+import CounterfactualAnalysis from '../components/CounterfactualAnalysis'
 import coreCourses from '../data/coreCourses.json'
 import { generateDayEvaluation, requestAIDayEvaluation } from '../utils/dayEvaluation.js'
 
@@ -82,6 +83,7 @@ function ResultDetails({ selectedMajor, selectedOptions, scores, onBack, onResta
         <div className="detail-header-status" aria-label="体验状态">
           <span>DAY 01</span>
           <span>REPORT</span>
+          <span>AI ASSIST</span>
         </div>
       </div>
 
@@ -127,6 +129,12 @@ function ResultDetails({ selectedMajor, selectedOptions, scores, onBack, onResta
         </section>
 
         <section className="course-chat-section detail-chat-section">
+          <CounterfactualAnalysis
+            selectedMajor={selectedMajor}
+            selectedOptions={selectedOptions}
+            scores={scores}
+            profile={evaluation.profile}
+          />
           <h2 className="section-title">课程问答</h2>
           <CourseChat
             selectedMajor={selectedMajor}
