@@ -13,8 +13,10 @@ const ALLOWED_ORIGIN = process.env.AI_PROXY_ORIGIN || "http://127.0.0.1:5173";
 const DEEPSEEK_BASE_URL = (process.env.DEEPSEEK_BASE_URL || "https://api.deepseek.com").replace(/\/$/, "");
 const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL || "deepseek-v4-flash";
 const DEEPSEEK_THINKING = process.env.DEEPSEEK_THINKING || "disabled";
+const SCORE_KEYS = ["health", "study", "social", "practice", "pressure"];
 
 const courseKnowledgeBase = await readJson(resolve(projectRoot, "web/src/data/courseKnowledgeBase.json"));
+const experienceTemplates = await readJson(resolve(projectRoot, "web/src/data/experienceTemplates.json"));
 
 const server = createServer(async (request, response) => {
   const requestUrl = new URL(request.url, `http://${request.headers.host}`);
@@ -49,6 +51,13 @@ const server = createServer(async (request, response) => {
       return;
     }
 
+    if (request.method === "POST" && requestUrl.pathname === "/api/counterfactual-analysis") {
+      const body = await readRequestBody(request);
+      const result = await handleCounterfactualAnalysis(body);
+      sendJson(response, 200, result);
+      return;
+    }
+
     sendJson(response, 404, { error: "接口不存在。" });
   } catch (error) {
     console.error(error);
@@ -67,6 +76,8 @@ server.listen(PORT, "127.0.0.1", () => {
 async function handleCourseChat(body) {
   const question = normalizeText(body?.question).slice(0, 500);
   const majorId = normalizeText(body?.majorId) || "computer";
+  const majorName = normalizeText(body?.majorName);
+  const dayContext = normalizeDayContext(body?.dayContext);
   const majorCourses = courseKnowledgeBase.filter((course) => course.majorId === majorId);
   const relatedCourses = selectRelatedCourses(majorCourses, question, 5);
 
@@ -78,7 +89,7 @@ async function handleCourseChat(body) {
     };
   }
 
-  const localFallback = buildLocalCourseAnswer(question, relatedCourses, majorCourses);
+  const localFallback = buildLocalCourseAnswer(question, relatedCourses, majorCourses, dayContext);
 
   if (!process.env.DEEPSEEK_API_KEY) {
     return {
@@ -91,6 +102,11 @@ async function handleCourseChat(body) {
 
   try {
     const answer = await callDeepSeek([
+      {
+        role: "system",
+        content:
+          "Use dayContext.profile, dayContext.scores and dayContext.selectedEvents as personalization context for the course consultation. Treat them as references, not as a final psychological or career assessment."
+      },
       {
         role: "system",
         content: [
@@ -110,6 +126,8 @@ async function handleCourseChat(body) {
           {
             question,
             majorId,
+            majorName,
+            dayContext,
             courseContext: relatedCourses.map(toCourseContext)
           },
           null,
@@ -185,6 +203,83 @@ async function handleDayEvaluation(body) {
   }
 }
 
+async function handleCounterfactualAnalysis(body) {
+  const goalId = normalizeText(body?.goalId) || "reducePressure";
+  const majorId = normalizeText(body?.majorId) || "computer";
+  const majorName = normalizeText(body?.majorName) || "当前专业";
+  const selectedEvents = Array.isArray(body?.selectedEvents) ? body.selectedEvents.slice(0, 8) : [];
+  const scores = SCORE_KEYS.reduce((result, key) => {
+    const score = Number(body?.scores?.[key]);
+    result[key] = Number.isFinite(score) ? score : 0;
+    return result;
+  }, {});
+  const profile = body?.profile && typeof body.profile === "object"
+    ? {
+        title: normalizeText(body.profile.title),
+        dominantKey: normalizeText(body.profile.dominantKey)
+      }
+    : null;
+  const payload = {
+    goalId,
+    goalLabel: getCounterfactualGoal(goalId).label,
+    majorId,
+    majorName,
+    scores,
+    profile,
+    selectedEvents,
+    alternatives: selectCounterfactualAlternatives({
+      majorId,
+      selectedEvents,
+      goalId,
+      limit: 1
+    })
+  };
+  const localFallback = buildLocalCounterfactualAnalysis(payload);
+
+  if (!process.env.DEEPSEEK_API_KEY) {
+    return {
+      source: "local-fallback",
+      answer: localFallback,
+      alternatives: payload.alternatives,
+      notice: "未配置 DEEPSEEK_API_KEY，当前使用本地反事实分析模板。"
+    };
+  }
+
+  try {
+    const answer = await callDeepSeek([
+      {
+        role: "system",
+        content: [
+          "你是面向高中生的专业体验反事实分析助手。",
+          "你的任务不是重新推荐专业，而是解释：如果用户在同一专业体验里换一种选择，五维体验可能会怎样变化。",
+          "请保持温和、具体、可执行，不做心理诊断或升学结论。",
+          "回答不超过 45 个汉字，只用一句话：说替换哪类选择，以及主要改变哪个体验维度。",
+          "必须基于提供的 scores、selectedEvents 和 alternatives，不要编造不存在的课程或地点。"
+        ].join("\n")
+      },
+      {
+        role: "user",
+        content: JSON.stringify(payload, null, 2)
+      }
+    ]);
+
+    return {
+      source: "deepseek",
+      model: DEEPSEEK_MODEL,
+      answer,
+      alternatives: payload.alternatives
+    };
+  } catch (error) {
+    console.error("DeepSeek counterfactual analysis failed:", error);
+    return {
+      source: "local-fallback",
+      answer: localFallback,
+      alternatives: payload.alternatives,
+      notice: "DeepSeek 暂时没有返回结果，已切换到本地反事实分析。"
+    };
+  }
+}
+
 async function callDeepSeek(messages) {
   const requestBody = {
     model: DEEPSEEK_MODEL,
@@ -215,7 +310,7 @@ async function callDeepSeek(messages) {
   return data?.choices?.[0]?.message?.content?.trim() || "AI 暂时没有生成内容。";
 }
 
-function buildLocalCourseAnswer(question, relatedCourses, majorCourses) {
+function buildLocalCourseAnswer(question, relatedCourses, majorCourses, dayContext = {}) {
   const courses = relatedCourses.length > 0 ? relatedCourses : majorCourses.slice(0, 3);
   if (courses.length === 0) {
     return "本地课程库里暂时没有找到这个专业的课程信息。可以先换一个专业或问一个更宽泛的问题。";
@@ -249,6 +344,96 @@ function buildLocalDayEvaluation(payload) {
       : "从课程线索看，你可以继续关注这个专业的基础课和实践课分别在训练什么能力。",
     "愿你把这次体验当作一次靠近真实大学生活的小预演：喜欢的地方值得继续探索，觉得有压力的地方也值得认真观察。"
   ].join("\n\n");
+}
+
+const COUNTERFACTUAL_GOALS = {
+  reducePressure: {
+    label: "降低压力",
+    intro: "如果把这一天切到更舒缓的平行路线，最值得调整的是高压力时段。",
+    advice: "下一次可以优先选择休息、运动或轻量复盘类活动，先观察自己是否更能长期适应。"
+  },
+  increasePractice: {
+    label: "加强实践",
+    intro: "如果你想让体验更接近真实专业训练，可以把一部分课堂或自习时间换成项目、实验或调研任务。",
+    advice: "下一次可以专门选择带有实验、项目、实习或调研属性的选项，看自己是否享受动手解决问题。"
+  },
+  balanceDay: {
+    label: "更均衡的一天",
+    intro: "如果希望这一天更均衡，关键不是把所有维度拉满，而是减少单一维度过度占用。",
+    advice: "下一次可以让学习、社交、实践和休息各出现一次，比较哪种节奏更接近你真实能坚持的状态。"
+  },
+  increaseSocial: {
+    label: "增加协作",
+    intro: "如果把路线调向协作型体验，你会更早遇到讨论、表达和团队推进这些真实大学场景。",
+    advice: "下一次可以选择小组讨论、社团活动或分享交流类选项，观察自己是否喜欢在协作中理解专业。"
+  }
+};
+
+function getCounterfactualGoal(goalId) {
+  return COUNTERFACTUAL_GOALS[goalId] || COUNTERFACTUAL_GOALS.reducePressure;
+}
+
+function buildLocalCounterfactualAnalysis(payload) {
+  const goal = getCounterfactualGoal(payload.goalId);
+  const topAlternative = payload.alternatives[0];
+
+  const alternativeLine = topAlternative
+    ? `试试把「${topAlternative.period}」换成「${topAlternative.label}」，主要观察压力 ${formatScoreDelta(topAlternative.score.pressure)}。`
+    : "可替代选项较少，先观察五维评分变化。";
+
+  return alternativeLine;
+}
+
+function selectCounterfactualAlternatives({ majorId, selectedEvents, goalId, limit = 3 }) {
+  const selectedIds = new Set(selectedEvents.map((event) => normalizeText(event?.id)).filter(Boolean));
+  const steps = Array.isArray(experienceTemplates[majorId]) ? experienceTemplates[majorId] : [];
+
+  return steps
+    .flatMap((step) => (step.options || []).map((option) => ({
+      id: option.id,
+      period: step.period,
+      label: option.label,
+      event: option.event,
+      locationId: option.locationId,
+      score: normalizeScoreObject(option.score),
+      rank: rankCounterfactualOption(option, goalId)
+    })))
+    .filter((option) => option.id && !selectedIds.has(option.id))
+    .sort((a, b) => b.rank - a.rank)
+    .slice(0, limit)
+    .map(({ rank, ...option }) => option);
+}
+
+function rankCounterfactualOption(option, goalId) {
+  const score = normalizeScoreObject(option.score);
+
+  if (goalId === "increasePractice") {
+    return score.practice * 4 + score.study + score.social - Math.max(score.pressure, 0);
+  }
+
+  if (goalId === "balanceDay") {
+    return score.health * 2 + score.social + score.practice + score.study - Math.abs(score.pressure) - Math.max(score.pressure, 0);
+  }
+
+  if (goalId === "increaseSocial") {
+    return score.social * 4 + score.practice + score.health - Math.max(score.pressure, 0);
+  }
+
+  return score.health * 3 - score.pressure * 4 + score.social + Math.min(score.study, 1);
+}
+
+function normalizeScoreObject(score = {}) {
+  return SCORE_KEYS.reduce((result, key) => {
+    const value = Number(score[key]);
+    result[key] = Number.isFinite(value) ? value : 0;
+    return result;
+  }, {});
+}
+
+function formatScoreDelta(value) {
+  const number = Number(value) || 0;
+  if (number > 0) return `+${number}`;
+  return String(number);
 }
 
 function selectRelatedCourses(courses, question, limit) {
@@ -306,6 +491,44 @@ function toCourseContext(course) {
     applicationAreas: course.applicationAreas,
     highSchoolFriendlyIntro: course.highSchoolFriendlyIntro,
     aiConsultationHints: course.aiConsultationHints
+  };
+}
+
+function normalizeDayContext(value = {}) {
+  const profile = value?.profile && typeof value.profile === "object"
+    ? {
+        id: normalizeText(value.profile.id),
+        title: normalizeText(value.profile.title),
+        dominantKey: normalizeText(value.profile.dominantKey),
+        description: normalizeText(value.profile.description).slice(0, 240),
+        advice: normalizeText(value.profile.advice).slice(0, 240)
+      }
+    : null;
+
+  const scores = SCORE_KEYS.reduce((result, key) => {
+    const score = Number(value?.scores?.[key]);
+    result[key] = Number.isFinite(score) ? score : 0;
+    return result;
+  }, {});
+
+  const selectedEvents = Array.isArray(value?.selectedEvents)
+    ? value.selectedEvents.slice(0, 8).map((option) => ({
+        id: normalizeText(option?.id),
+        label: normalizeText(option?.label).slice(0, 160),
+        event: normalizeText(option?.event).slice(0, 120),
+        locationId: normalizeText(option?.locationId),
+        score: SCORE_KEYS.reduce((result, key) => {
+          const score = Number(option?.score?.[key]);
+          result[key] = Number.isFinite(score) ? score : 0;
+          return result;
+        }, {})
+      }))
+    : [];
+
+  return {
+    profile,
+    scores,
+    selectedEvents
   };
 }
 
